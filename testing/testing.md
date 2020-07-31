@@ -48,3 +48,5 @@ Devices emulated are as follows:
 Bug: Question not showing when using show question function in gameScript.js
 
 debug: variable declared incorrectly when checked on devtools.
+
+Bug: Difficulty getting it to show next question
