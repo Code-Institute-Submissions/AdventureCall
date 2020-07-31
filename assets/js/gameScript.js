@@ -1,5 +1,5 @@
-const questionElement = document.getElementByID('question')
-const answerButtonsElement = document.getElementByID('answer-options')
+const questionElement = document.getElementById('question')
+const answerButtonsElement = document.getElementById('answer-buttons')
 
 let gameState = {}
 
@@ -10,7 +10,7 @@ function playGame() {
 
 function showQuestion(questionNodeIndex) {
     const questionNode = questionNodes.find(questionNode => questionNode.id === questionNodeIndex)
-    questionElement.innerText = questionNode.text
+    questionElement.innerText = questionNode.question
 }
 
 function pickedAnswer(answer) {
