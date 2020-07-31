@@ -1,0 +1,17 @@
+.center{
+    margin: auto;
+    text-align: center;
+}
+
+.game-questions{
+    margin: auto;
+    text-align: center;
+    width: 400px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px;
+}
