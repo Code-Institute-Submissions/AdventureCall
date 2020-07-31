@@ -31,7 +31,7 @@ function showAnswer(answer) {
 }
 
 function pickedAnswer(answer) {
-  const nextQuestionNodeId = answer.nextQuestion
+  const questionNodeIndex = answer.nextAnswer
   if (questionNodeIndex <= 0) {
     return playGame()
   }
@@ -68,7 +68,7 @@ const questionNodes = [
         question: 'The witches attack you.  You are Dead.',
         answers: [
             {
-                text: 'Roll Boulder',
+                text: 'Start Again?',
                 nextAnswer: -1
             }
         ]
