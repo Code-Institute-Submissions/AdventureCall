@@ -2,6 +2,8 @@ const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-options");
 const playerName = document.getElementById("player-name").value;
 
+console.log(playerName.value);
+
 let gameState = {};
 
 function playGame() {
