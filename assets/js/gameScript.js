@@ -5,7 +5,6 @@ const playerName = document.getElementById('player-name').value;
 let gameState = {};
 
 function playGame() {
-    items = {};
     showQuestion(1);
 }
 
