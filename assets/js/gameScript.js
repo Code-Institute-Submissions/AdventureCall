@@ -84,6 +84,7 @@ const questionNodes = [
         answers: [
             {
                 text: 'Take Amulet and travel along the eastern passageway',
+                addState: { amulet: true },
                 nextAnswer: 5
             },
             {
@@ -93,19 +94,25 @@ const questionNodes = [
             },
             {
                 text: 'Ignore skeleton and travel along the eastern passageway',
-                nextAnswer: 5
+                nextAnswer: 5,
+                addState: { noItems: true}
             }
         ]
     },
         {
         id: 5,
-        question: 'Before you is a locked Gate of Bones',
+        question: 'As you come out of the passageway the tunnel caves in behind you and now you stand before you is a locked Gate of Bones with impassable cliff to either side',
         answers: [
             {
                 text: 'Use skeleton finger as a key on the locked gate',
                 stateRequired: (currentGameState) => currentGameState.skeletonFinger,
                 stateChange: { skeletonFinger: false},
                 nextAnswer: 6
+            },
+            {
+                text: 'You have no way back and no items and so are stuck.  You waste away.  Would you like ot restart?',
+                stateRequired: (currentGameState) => currentGameState.noItems || currentGameState.amulet,
+                nextAnswer: -1
             }
         ]
     }
