@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script src="assets/js/dommanipulation.js"></script>
     <title>Adventure Call</title>
 </head>
 <body>
     <div class="center">
         <h1>Adventure Call</h1>
     </div>
-    <div class="game-questions">
+    <div id="welcome-screen" class="show">
+        <div class="center">
+            <h2>Welcome to Adventure Call!  I am falconhoof.  I will be your guide on this quest.  What is your name traveller?</h2>
+            <input id="player-name" type="text" placeholder="Your Name">
+            <button id="start-game">Start Game</button>
+        </div>
+    </div>
+    <div id="game-screen" class="center hide">
         <div id="question">Question</div>
         <div id="answer-options" class="buttons">
             <button>Answer 1</button>

@@ -1,5 +1,6 @@
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-options')
+const playerName = document.getElementById('player-name')
 
 let gameState = {}
 

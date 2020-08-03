@@ -3,7 +3,15 @@
     text-align: center;
 }
 
-.game-questions{
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.center{
     margin: auto;
     text-align: center;
     width: 400px;
