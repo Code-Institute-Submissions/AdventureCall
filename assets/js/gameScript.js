@@ -27,11 +27,12 @@ function showQuestion(questionNodeIndex) {
 }
 
 function showAnswer(answer) {
-    return true
+    return answer.stateRequired == null || answer.stateRequired(gameState)
 }
 
 function pickedAnswer(answer) {
   const questionNodeIndex = answer.nextAnswer
+  gameState = Object.assign(gameState, answer.addState)
   if (questionNodeIndex <= 0) {
     return playGame()
   }
@@ -55,11 +56,15 @@ const questionNodes = [
     },
     {
         id: 2,
-        question: 'You roll the boulder which reveals a secret passageway to a catacomb.  In the catacomb is a sarcophagus and passageway north',
+        question: 'You roll the boulder which reveals a secret entranceway to a catacomb.  In the catacomb is a sarcophagus and passageway to the east',
         answers: [
             {
                 text: 'Open Sarcophagus',
                 nextAnswer: 4
+            },
+            {
+                text: 'Explore the eastern passagway',
+                nextAnswer: 5
             }
         ]
     },
@@ -70,6 +75,37 @@ const questionNodes = [
             {
                 text: 'Start Again?',
                 nextAnswer: -1
+            }
+        ]
+    },
+    {
+        id: 4,
+        question: 'Inside the Sarcophagus is a skeleton and around its neck is a golden amulet!',
+        answers: [
+            {
+                text: 'Take Amulet and travel along the eastern passageway',
+                nextAnswer: 5
+            },
+            {
+                text: 'Take Finger from skeleton and travel along the eastern passageway',
+                addState: { skeletonFinger: true },
+                nextAnswer: 5
+            },
+            {
+                text: 'Ignore skeleton and travel along the eastern passageway',
+                nextAnswer: 5
+            }
+        ]
+    },
+        {
+        id: 5,
+        question: 'Before you is a locked Gate of Bones',
+        answers: [
+            {
+                text: 'Use skeleton finger as a key on the locked gate',
+                stateRequired: (currentGameState) => currentGameState.skeletonFinger,
+                stateChange: { skeletonFinger: false},
+                nextAnswer: 6
             }
         ]
     }
