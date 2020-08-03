@@ -1,8 +1,5 @@
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-options");
-const playerName = document.getElementById("player-name").value;
-
-console.log(playerName.value);
 
 let gameState = {};
 
@@ -13,7 +10,7 @@ function playGame() {
 
 function showQuestion(questionNodeIndex) {
     const questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
-    questionElement.innerText = playerName + questionNode.question;
+    questionElement.innerText = questionNode.question;
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }

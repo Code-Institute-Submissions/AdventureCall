@@ -52,3 +52,5 @@ debug: variable declared incorrectly when checked on devtools.
 Bug: Difficulty getting it to show next question
 
 debug: checked syntax in dev tools and debugged syntax
+
+Bug: Name not showing in question when entered into textbox

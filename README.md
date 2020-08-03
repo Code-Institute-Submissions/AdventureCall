@@ -102,5 +102,5 @@ Thanks to the following people for making the project happen:
 
 - My Mentor
 - The [Code Institute](https://codeinstitute.net/) Slack Community.
-- The [Code Institute](https://codeinstitute.net/) tutors and instructional material.  Tutor Stephen.
+- The [Code Institute](https://codeinstitute.net/) tutors and instructional material.  Tutor Stephen. Tutor Miklos.
 - My Wife Joanna Johnston for her (contructive) criticism and understanding when I lock myself away in the attic for hours on end

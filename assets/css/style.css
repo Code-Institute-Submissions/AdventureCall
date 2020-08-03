@@ -1,6 +1,7 @@
 .center{
     margin: auto;
     text-align: center;
+    width: 400px;
 }
 
 .show {
@@ -9,12 +10,6 @@
 
 .hide {
     visibility: hidden;
-}
-
-.center{
-    margin: auto;
-    text-align: center;
-    width: 400px;
 }
 
 .buttons{
