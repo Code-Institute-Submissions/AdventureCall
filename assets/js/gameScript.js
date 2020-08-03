@@ -1,43 +1,43 @@
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-options')
-const playerName = document.getElementById('player-name')
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-options');
+const playerName = document.getElementById('player-name').value;
 
-let gameState = {}
+let gameState = {};
 
 function playGame() {
-    items = {}
-    showQuestion(1)
+    items = {};
+    showQuestion(1);
 }
 
 function showQuestion(questionNodeIndex) {
-    const questionNode = questionNodes.find(questionNode => questionNode.id === questionNodeIndex)
-    questionElement.innerText = questionNode.question
+    const questionNode = questionNodes.find(questionNode => questionNode.id === questionNodeIndex);
+    questionElement.innerText = playerName + questionNode.question;
     while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 
   questionNode.answers.forEach(answer => {
       if (showAnswer(answer)) {
-          const button = document.createElement('button')
-          button.innerText = answer.text
-          button.classList.add('buttons')
-          button.addEventListener('click', () => pickedAnswer(answer))
-          answerButtonsElement.appendChild(button)
+          const button = document.createElement('button');
+          button.innerText = answer.text;
+          button.classList.add('buttons');
+          button.addEventListener('click', () => pickedAnswer(answer));
+          answerButtonsElement.appendChild(button);
       }
-  })
+  });
 }
 
 function showAnswer(answer) {
-    return answer.stateRequired == null || answer.stateRequired(gameState)
+    return answer.stateRequired == null || answer.stateRequired(gameState);
 }
 
 function pickedAnswer(answer) {
-  const questionNodeIndex = answer.nextAnswer
-  gameState = Object.assign(gameState, answer.addState)
+  const questionNodeIndex = answer.nextAnswer;
+  gameState = Object.assign(gameState, answer.addState);
   if (questionNodeIndex <= 0) {
-    return playGame()
+    return playGame();
   }
-  showQuestion(questionNodeIndex)
+  showQuestion(questionNodeIndex);
 }
 
 const questionNodes = [
@@ -117,6 +117,6 @@ const questionNodes = [
             }
         ]
     }
-]
+];
 
-playGame()
+playGame();
