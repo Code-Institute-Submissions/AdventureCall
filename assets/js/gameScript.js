@@ -1,5 +1,22 @@
+$(document).ready(function() {
+    $("#start-game").click(function() {
+        $("#welcome-screen").removeClass("show");
+        $("#welcome-screen").addClass("hide");
+        $("#game-screen").removeClass("hide");
+        $("#game-screen").addClass("show");
+    })
+});
+
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-options");
+let playerName;
+
+
+function getPlayerName() {
+    let playerName = document.getElementById("player-name").value;
+};
+
+console.log(playerName);
 
 let gameState = {};
 
