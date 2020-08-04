@@ -1,7 +1,18 @@
-.center{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.center-logo{
     margin: auto;
     text-align: center;
-    width: 400px;
+    width: 50%;
+    height: 50%;
+}
+
+.center-text{
+    margin: auto;
+    text-align: center;
 }
 
 .show {
