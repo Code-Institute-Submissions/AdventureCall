@@ -111,7 +111,7 @@ const questionNodes = [
                 nextAnswer: 6,
             },
             {
-                text: "You have no way back and no items and so are stuck.  You waste away.  Would you like ot restart?",
+                text: "You have no way back and no items and so are stuck.  You waste away.  Would you like to restart?",
                 stateRequired: (currentGameState) => currentGameState.noItems || currentGameState.amulet,
                 nextAnswer: -1,
             },
