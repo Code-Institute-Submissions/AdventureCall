@@ -65,6 +65,7 @@ const questionNodes = [
             {
                 text: "Explore the eastern passagway",
                 nextAnswer: 5,
+                addState: { noItems: true },
             },
         ],
     },

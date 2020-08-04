@@ -1,18 +1,19 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
 }
 
 .center-logo{
     margin: auto;
     text-align: center;
     width: 50%;
-    height: 50%;
 }
 
 .center-text{
     margin: auto;
     text-align: center;
+    width: 400px;
 }
 
 .show {
@@ -28,4 +29,5 @@ body {
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin-top: 20px;
+    margin: auto;
 }
