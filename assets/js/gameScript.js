@@ -3,6 +3,8 @@ const answerButtonsElement = document.getElementById("answer-options");
 
 let gameState = {};
 
+
+
 function playGame() {
     items : {};
     showQuestion(1);

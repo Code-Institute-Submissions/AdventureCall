@@ -13,7 +13,7 @@ body {
     position: relative;
 }
 
-.center-question-container{
+.question-container{
     position: absolute;
     width: 288px;
     border: 1px solid black;

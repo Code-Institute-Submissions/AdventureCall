@@ -1,4 +1,4 @@
-var playerName;
+let playerName;
 
 $(document).ready(function() {
     $("#start-game").click(function() {
@@ -6,7 +6,7 @@ $(document).ready(function() {
         $("#welcome-screen").addClass("hide");
         $("#game-screen").removeClass("hide");
         $("#game-screen").addClass("show");
-        playerName = $("#player-name").val();
+        let playerName = $("#player-name").val();
     })
 });
 
