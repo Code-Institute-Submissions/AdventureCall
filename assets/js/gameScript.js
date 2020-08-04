@@ -19,7 +19,7 @@ function showQuestion(questionNodeIndex) {
         if (showAnswer(answer)) {
             const button = document.createElement("button");
             button.innerText = answer.text;
-            button.classList.add("buttons");
+            button.classList.add("button-style");
             button.addEventListener("click", () => pickedAnswer(answer));
             answerButtonsElement.appendChild(button);
         }
