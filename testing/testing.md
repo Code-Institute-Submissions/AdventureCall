@@ -54,3 +54,7 @@ Bug: Difficulty getting it to show next question
 debug: checked syntax in dev tools and debugged syntax
 
 Bug: Name not showing in question when entered into textbox
+
+Bug: Restart game message didn't appear when eastern passageway was chosen in question 2
+
+Debug: add gamestate of noitems in question 2
