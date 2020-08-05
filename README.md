@@ -36,6 +36,12 @@ for the look of the website
 [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 for the logic of the game.  To manipulate the HTML and CSS on the screen.
 
+[jQuery](https://en.wikipedia.org/wiki/JQuery)
+To manipulate the HTML and CSS on the screen.
+
+[JShint](https://jshint.com/)
+To validate javscript code.
+
 [Asana](https://asana.com/)
 for project management
 
@@ -53,9 +59,6 @@ for creating Wireframes for initial visual development
 [Troy](http://troy.labs.daum.net/) to test website on different device types and sizes
 
 [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) for testing code health, accessibility, speed and search engine optimisation
-
-Modified Embedded Code from https://soundcloud.com/ and https://www.spotify.com/
-
 
 # Testing
 

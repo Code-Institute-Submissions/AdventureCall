@@ -58,3 +58,7 @@ Bug: Name not showing in question when entered into textbox
 Bug: Restart game message didn't appear when eastern passageway was chosen in question 2
 
 Debug: add gamestate of noitems in question 2
+
+Bug: Unclosed tag for div created issues with w3c validator.
+
+Debug: Cloed div tag

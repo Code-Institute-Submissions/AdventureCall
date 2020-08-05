@@ -15,7 +15,7 @@ body {
 
 .question-container{
     position: absolute;
-    width: 288px;
+    width: 300px;
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
@@ -36,7 +36,7 @@ body {
 }
 
 .welcome-style{
-    font-family: 'Open Sans';
+    font-family: 'MedievalSharp';
     padding: 10px;
 }
 

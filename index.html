@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Adventure Call</title>
-</head>
-<body>
-    <div class="center-logo">
-        <img src="assets/images/ac-logo.png" alt="Adventure Call Logo">
-    </div>
-    <div id="welcome-screen" class="question-container show">
-        <div class="question-style">
-            <img src="assets/images/falconhoof.jpg" alt="Falconhoof.  A man dressed in typical medival fantasy clothing." width="265" height="200">
-            <h2>Greetings Traveller and welcome to Adventure Call.  I am Falconhoof.  I will be your guide on this quest.  What is your name traveller?</h2>
-            <input id="player-name" type="text" placeholder="Your Name">
-            <button id="start-game" class="button-style">Start Game</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A Text based Adventure Game for fans of Limmy's Adventure Call sketches" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Adventure Call</title>
+    </head>
+    <body>
+        <div class="center-logo">
+            <img src="assets/images/ac-logo.png" alt="Adventure Call Logo" />
         </div>
-    </div>
-    <div id="game-screen" class="question-container hide">
-        <div id="welcome" class="welcome-style hide">Welcome!</div>
-        <div id="question" class="question-style">Question</div>
-        <div id="answer-options" class="buttons">
-            <button class="button-style">Answer 1</button>
-            <button class="button-style">Answer 2</button>
-            <button class="button-style">Answer 3</button>
-            <button class="button-style">Answer 4</button>
-    </div>
-</body>
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-<script src="assets/js/gameScript.js"></script>
+        <div id="welcome-screen" class="question-container show">
+            <div class="question-style">
+                <img src="assets/images/falconhoof.jpg" alt="Falconhoof.  A man dressed in typical medival fantasy clothing." width="265" height="200" />
+                <h2>Greetings Traveller and welcome to Adventure Call. I am Falconhoof. I will be your guide on this quest. What is your name traveller?</h2>
+                <input id="player-name" type="text" placeholder="Your Name" />
+                <button id="start-game" class="button-style">Start Game</button>
+            </div>
+        </div>
+        <div id="game-screen" class="question-container hide">
+            <div id="welcome" class="welcome-style hide">Welcome!</div>
+            <div id="question" class="question-style">Question</div>
+            <div id="answer-options" class="buttons">
+                <button class="button-style">Answer 1</button>
+                <button class="button-style">Answer 2</button>
+                <button class="button-style">Answer 3</button>
+                <button class="button-style">Answer 4</button>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="assets/js/gameScript.js"></script>
+    </body>
 </html>
