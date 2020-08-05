@@ -61,4 +61,8 @@ Debug: add gamestate of noitems in question 2
 
 Bug: Unclosed tag for div created issues with w3c validator.
 
-Debug: Cloed div tag
+Debug: Closed div tag
+
+Bug: Restart message appeared on question 5 even when player has correct item
+
+debug: 

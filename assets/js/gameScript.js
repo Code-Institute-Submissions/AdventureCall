@@ -18,11 +18,10 @@ $(document).ready(function () {
     const questionElement = document.getElementById("question");
     const answerButtonsElement = document.getElementById("answer-options");
 
-    let gameState = {};
+    let items = {};
 
     function playGame() {
-        items: {
-        }
+        items: {};
         showQuestion(1);
     }
 
@@ -47,12 +46,12 @@ $(document).ready(function () {
     }
 
     function showAnswer(answer) {
-        return answer.stateRequired == null || answer.stateRequired(gameState);
+        return answer.stateRequired == null || answer.stateRequired(items);
     }
 
     function pickedAnswer(answer) {
         const questionNodeIndex = answer.nextAnswer;
-        gameState = Object.assign(gameState, answer.addState);
+        items = Object.assign(items, answer.addState);
         if (questionNodeIndex <= 0) {
             return playGame();
         }
@@ -85,7 +84,6 @@ $(document).ready(function () {
                 {
                     text: "Explore the eastern passagway",
                     nextAnswer: 5,
-                    addState: { noItems: true },
                 },
             ],
         },
@@ -130,7 +128,7 @@ $(document).ready(function () {
                 },
                 {
                     text: "You have no way back and no useful items and so are stuck.  You waste away.  Would you like to restart?",
-                    stateRequired: (currentGameState) => null,
+                    stateChange: { skeletonFinger: false},
                     nextAnswer: -1,
                 },
             ],
