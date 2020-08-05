@@ -4,7 +4,7 @@ $(document).ready(function () {
         if (playerName == null || playerName == "") {
             alert ('Name not entered!')
         } else {
-        let welcomeGreeting = `Welcome! ${playerName}`;
+        let welcomeGreeting = `Welcome, ${playerName}`;
         $("#welcome").removeClass("hide");
         $("#welcome").addClass("show");
         $("#welcome").text(welcomeGreeting);
