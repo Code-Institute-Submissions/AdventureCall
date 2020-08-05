@@ -57,7 +57,6 @@ $(document).ready(function () {
             return playGame();
         }
         showQuestion(questionNodeIndex);
-        console.log(items);
     }
 
 
@@ -206,7 +205,7 @@ $(document).ready(function () {
                 {
                     text: "Try to use key to lock door behind you?",
                     stateRequired: (currentGameState) => currentGameState.trollKey,
-                    nextAnswer: 14,
+                    nextAnswer: 16,
                 },
                 {
                     text: "Jump the chasm",
@@ -235,7 +234,6 @@ $(document).ready(function () {
             answers: [
                 {
                     text: "Restart Game?",
-                    stateChange: { trollKey: false },
                     nextAnswer: -1,
                 },
             ],
@@ -243,6 +241,16 @@ $(document).ready(function () {
         {
             id: 15,
             question: "A giant spider attacks you.  You die",
+            answers: [
+                {
+                    text: "Restart?",
+                    nextAnswer: -1,
+                },
+            ],
+        },
+        {
+            id: 16,
+            question: "Thr troll is oo quick for you and pops your head off like a beer bottle top.  You die",
             answers: [
                 {
                     text: "Restart?",

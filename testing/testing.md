@@ -68,3 +68,7 @@ Debug: Closed div tag
 Bug: Restart message appeared on question 5 even when player has correct item
 
 debug: removed add states except for those required.  Added extra steps so that next step gave restart option.
+
+Bug: Previous States showing when new game starts.
+
+debug: console logging 'items' in pickedAnswer function to find scope and resetting items to {}
