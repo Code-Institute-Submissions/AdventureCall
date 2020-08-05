@@ -118,17 +118,26 @@ $(document).ready(function () {
         },
         {
             id: 5,
-            question: "As you come out of the passageway the tunnel caves in behind you and now you stand before you is a locked Gate of Bones with impassable cliff to either side",
+            question: "As you come out of the passageway the tunnel caves in behind you and now you stand before you is a locked Gate of Bones with Large cliffs to either side",
             answers: [
                 {
                     text: "Use skeleton finger as a key on the locked gate",
                     stateRequired: (currentGameState) => currentGameState.skeletonFinger,
                     stateChange: { skeletonFinger: false },
-                    nextAnswer: 6,
+                    nextAnswer: 7,
                 },
                 {
-                    text: "You have no way back and no useful items and so are stuck.  You waste away.  Would you like to restart?",
-                    stateChange: { skeletonFinger: false},
+                    text: "Try to scale the cliffs",
+                    nextAnswer: 6,
+                },
+            ],
+        },
+        {
+            id: 6,
+            question: "You slip as you climb up the walls and fall to your death",
+            answers: [
+                {
+                    text: "Restart?",
                     nextAnswer: -1,
                 },
             ],
