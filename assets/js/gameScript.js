@@ -124,25 +124,77 @@ $(document).ready(function () {
                     text: "Use skeleton finger as a key on the locked gate",
                     stateRequired: (currentGameState) => currentGameState.skeletonFinger,
                     stateChange: { skeletonFinger: false },
-                    nextAnswer: 7,
+                    nextAnswer: 6,
                 },
                 {
                     text: "Try to scale the cliffs",
-                    nextAnswer: 6,
+                    nextAnswer: 7,
                 },
             ],
         },
         {
             id: 6,
+            question: "The gate unlocks and a narrow pathway leads you to a Castle Tower with and entrance.  Inside the entrance are stairs going up and stairs going down",
+            answers: [
+                {
+                    text: "Go Down the Stairs",
+                    nextAnswer: 8,
+                },
+                {
+                    text: "Go Up the Stairs",
+                    nextAnswer: 9,
+                },
+            ],
+        },
+        {
+            id: 7,
             question: "You slip as you climb up the walls and fall to your death",
             answers: [
                 {
                     text: "Restart?",
                     nextAnswer: -1,
                 },
-            ],
+            ],            
+        },
+        {
+            id: 8,
+            question: "In the Dungeon you find a giant troll.  He cuts off your head",
+            answers: [
+                {
+                    text: "Restart?",
+                    nextAnswer: -1,
+                },
+            ],            
+        },
+        {
+            id: 9,
+            question: "In an upstairs room you find a troll asleep with a key around his neck and an open door",
+            answers: [
+                {
+                    text: "Punch Troll",
+                    nextAnswer: 10,
+                },
+                {
+                    text: "Take key",
+                    stateChange: { trollKey: true },
+                    nextAnswer: 11,
+                },
+                {
+                    text: "Ignore troll and walk through open door",
+                    nextAnswer: 11,
+                },
+            ],            
+        },
+        {
+            id: 10,
+            question: "The troll wakes up and eats you whole",
+            answers: [
+                {
+                    text: "Restart?",
+                    nextAnswer: -1,
+                },
+            ],            
         },
     ];
-
     playGame();
 });
