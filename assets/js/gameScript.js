@@ -53,10 +53,14 @@ $(document).ready(function () {
         const questionNodeIndex = answer.nextAnswer;
         items = Object.assign(items, answer.addState);
         if (questionNodeIndex <= 0) {
+            items = {};
             return playGame();
         }
         showQuestion(questionNodeIndex);
+        console.log(items);
     }
+
+
 
     const questionNodes = [
         {
@@ -123,7 +127,7 @@ $(document).ready(function () {
                 {
                     text: "Use skeleton finger as a key on the locked gate",
                     stateRequired: (currentGameState) => currentGameState.skeletonFinger,
-                    stateChange: { skeletonFinger: false },
+                    addState: {},
                     nextAnswer: 6,
                 },
                 {
@@ -134,7 +138,7 @@ $(document).ready(function () {
         },
         {
             id: 6,
-            question: "The gate unlocks and a narrow pathway leads you to a Castle Tower with and entrance.  Inside the entrance are stairs going up and stairs going down",
+            question: "The gate unlocks and a narrow pathway leads you to a Gigantic Castle Tower with and entrance.  Inside the entrance are stairs going up and stairs going down",
             answers: [
                 {
                     text: "Go Down the Stairs",
@@ -176,7 +180,7 @@ $(document).ready(function () {
                 },
                 {
                     text: "Take key",
-                    stateChange: { trollKey: true },
+                    addState: { trollKey: true },
                     nextAnswer: 11,
                 },
                 {
@@ -197,13 +201,55 @@ $(document).ready(function () {
         },
         {
             id: 11,
-            question: "Before you ",
+            question: "Before you is a chasm but behind you you hear the troll waking up",
+            answers: [
+                {
+                    text: "Try to use key to lock door behind you?",
+                    stateRequired: (currentGameState) => currentGameState.trollKey,
+                    nextAnswer: 14,
+                },
+                {
+                    text: "Jump the chasm",
+                    nextAnswer: 12,
+                },
+            ],
+        },
+        {
+            id: 12,
+            question: "You just about make it to the other side and before you is a locked door",
+            answers: [
+                {
+                    text: "Open Door",
+                    stateRequired: (currentGameState) => currentGameState.trollKey,
+                    nextAnswer: 14,
+                },
+                {
+                    text: "Explore area",
+                    nextAnswer: 15,
+                },
+            ],
+        },
+        {
+            id: 14,
+            question: "You walk into a treasure filled room and a wizard inside bestows upon you magical wizard powers which give you control over all the beasts in the castle. Hes says, You have a good heart and are a true warrior,",
+            answers: [
+                {
+                    text: "Restart Game?",
+                    stateChange: { trollKey: false },
+                    nextAnswer: -1,
+                },
+            ],
+        },
+        {
+            id: 15,
+            question: "A giant spider attacks you.  You die",
             answers: [
                 {
                     text: "Restart?",
+                    stateChange: { trollKey: false },
                     nextAnswer: -1,
                 },
-            ],            
+            ],
         },
     ];
     playGame();
