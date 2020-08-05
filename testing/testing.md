@@ -55,6 +55,8 @@ debug: checked syntax in dev tools and debugged syntax
 
 Bug: Name not showing in question when entered into textbox
 
+debug: using jquery wrote function within function and used variable locally within that function to add name to another element welcoming
+
 Bug: Restart game message didn't appear when eastern passageway was chosen in question 2
 
 Debug: add gamestate of noitems in question 2
@@ -65,4 +67,4 @@ Debug: Closed div tag
 
 Bug: Restart message appeared on question 5 even when player has correct item
 
-debug: 
+debug: removed add states except for those required.  Added extra steps so that next step gave restart option.

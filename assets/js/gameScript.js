@@ -195,6 +195,16 @@ $(document).ready(function () {
                 },
             ],            
         },
+        {
+            id: 11,
+            question: "Before you ",
+            answers: [
+                {
+                    text: "Restart?",
+                    nextAnswer: -1,
+                },
+            ],            
+        },
     ];
     playGame();
 });
