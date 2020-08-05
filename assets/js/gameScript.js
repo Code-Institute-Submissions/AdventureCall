@@ -4,17 +4,15 @@ $(document).ready(function () {
         $("#welcome-screen").addClass("hide");
         $("#game-screen").removeClass("hide");
         $("#game-screen").addClass("show");
+        let playerName = $("#player-name").val();
+        let welcomeGreeting = `Welcome! ${playerName}`;
+        $("#welcome").removeClass("hide");
+        $("#welcome").addClass("show");
+        $("#welcome").text(welcomeGreeting);
     });
 
     const questionElement = document.getElementById("question");
     const answerButtonsElement = document.getElementById("answer-options");
-    let playerName;
-
-    function getPlayerName() {
-        playerName = document.getElementById("player-name").value;
-    };
-
-    console.log(playerName);
 
     let gameState = {};
 
@@ -38,6 +36,8 @@ $(document).ready(function () {
                 button.classList.add("button-style");
                 button.addEventListener("click", () => pickedAnswer(answer));
                 answerButtonsElement.appendChild(button);
+                $("#welcome").removeClass("show");
+                $("#welcome").addClass("hide");
             }
         });
     }

@@ -35,6 +35,11 @@ body {
     visibility: hidden;
 }
 
+.welcome-style{
+    font-family: 'Open Sans';
+    padding: 10px;
+}
+
 .question-style{
     font-family: 'Open Sans';
     padding: 10px;
