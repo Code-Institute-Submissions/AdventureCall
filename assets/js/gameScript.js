@@ -215,16 +215,24 @@ $(document).ready(function () {
         },
         {
             id: 12,
-            question: "You just about make it to the other side and before you is a locked door",
+            question: "You make it to the other side, just about! Before you is a locked door and beside it a set of ladders",
             answers: [
                 {
-                    text: "Open Door",
-                    stateRequired: (currentGameState) => currentGameState.trollKey,
-                    nextAnswer: 14,
+                    text: "Look on the ground",
+                    nextAnswer: 15,
+                },
+                {
+                    text: "Climb up the ladders",
+                    nextAnswer: 17,
                 },
                 {
                     text: "Explore area",
                     nextAnswer: 15,
+                },
+                {
+                    text: "Open Door",
+                    stateRequired: (currentGameState) => currentGameState.trollKey,
+                    nextAnswer: 14,
                 },
             ],
         },
@@ -250,11 +258,34 @@ $(document).ready(function () {
         },
         {
             id: 16,
-            question: "Thr troll is oo quick for you and pops your head off like a beer bottle top.  You die",
+            question: "The troll is oo quick for you and pops your head off like a beer bottle top.  You die",
             answers: [
                 {
                     text: "Restart?",
-                    stateChange: { trollKey: false },
+                    nextAnswer: -1,
+                },
+            ],
+        },
+        {
+            id: 17,
+            question: "You alight on the roof of the tower and beside you is a roofer replacing roof tiles",
+            answers: [
+                {
+                    text: "Climb back down?",
+                    nextAnswer: 12,
+                },
+                {
+                    text: "Offer to help the roofer",
+                    nextAnswer: 18,
+                },
+            ],
+        },
+        {
+            id: 18,
+            question: "The roofer gladly accepts your help and hands you a bucket of nails.  It's very heavy and you overbalance.  A gust of wind whisks you off the roof to your death",
+            answers: [
+                {
+                    text: "Restart?",
                     nextAnswer: -1,
                 },
             ],
