@@ -105,7 +105,6 @@ $(document).ready(function () {
             answers: [
                 {
                     text: "Take Amulet and travel along the eastern passageway",
-                    addState: { amulet: true },
                     nextAnswer: 5,
                 },
                 {
@@ -116,7 +115,6 @@ $(document).ready(function () {
                 {
                     text: "Ignore skeleton and travel along the eastern passageway",
                     nextAnswer: 5,
-                    addState: { noItems: true },
                 },
             ],
         },
@@ -132,7 +130,7 @@ $(document).ready(function () {
                 },
                 {
                     text: "You have no way back and no useful items and so are stuck.  You waste away.  Would you like to restart?",
-                    stateRequired: (currentGameState) => currentGameState.noItems || currentGameState.amulet,
+                    stateRequired: (currentGameState) => null,
                     nextAnswer: -1,
                 },
             ],
