@@ -258,7 +258,7 @@ $(document).ready(function () {
         },
         {
             id: 16,
-            question: "The troll is oo quick for you and pops your head off like a beer bottle top.  You die",
+            question: "The troll is too quick for you and pops your head off like a beer bottle top.  You die",
             answers: [
                 {
                     text: "Restart?",
