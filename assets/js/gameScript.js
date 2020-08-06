@@ -47,6 +47,7 @@ $(document).ready(function () {
     }
 
     // The function which determines which image, question and answer options come up on the screen.
+    // It creates the variable questionNode which looks in the questionNodes array to find the question ID
 
     function showQuestion(questionNodeIndex) {
         const questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
@@ -72,6 +73,11 @@ $(document).ready(function () {
     function showAnswer(answer) {
         return answer.stateRequired == null || answer.stateRequired(items);
     }
+
+
+    // The function below creates the questionNodeIndex variable from the answer from showQuestion function
+    // it then checks the answer id to see if the character picks up any items.
+    // it also checks the answer and if it is answer 19 the function will take the user to the end screen
 
     function pickedAnswer(answer) {
         const questionNodeIndex = answer.nextAnswer;
@@ -120,6 +126,7 @@ $(document).ready(function () {
                     nextAnswer: 5,
                 },
             ],
+            image: '',
         },
         {
             id: 3,
@@ -150,6 +157,7 @@ $(document).ready(function () {
                     nextAnswer: 5,
                 },
             ],
+            image: '',
         },
         {
             id: 5,
@@ -165,6 +173,7 @@ $(document).ready(function () {
                     nextAnswer: 7,
                 },
             ],
+            image: '',
         },
         {
             id: 6,
@@ -179,6 +188,7 @@ $(document).ready(function () {
                     nextAnswer: 9,
                 },
             ],
+            image: '',
         },
         {
             id: 7,
@@ -219,7 +229,8 @@ $(document).ready(function () {
                     text: "Ignore troll and walk through open door",
                     nextAnswer: 11,
                 },
-            ],            
+            ],
+            image: '',        
         },
         {
             id: 10,
@@ -246,6 +257,7 @@ $(document).ready(function () {
                     nextAnswer: 12,
                 },
             ],
+            image: '',
         },
         {
             id: 12,
@@ -269,6 +281,7 @@ $(document).ready(function () {
                     nextAnswer: 14,
                 },
             ],
+            image: '',
         },
         {
             id: 14,
@@ -315,6 +328,7 @@ $(document).ready(function () {
                     nextAnswer: 18,
                 },
             ],
+            image: '',
         },
         {
             id: 18,
