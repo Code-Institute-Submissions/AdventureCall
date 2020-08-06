@@ -31,8 +31,10 @@ $(document).ready(function () {
 
     // Declaring the variables which will determine which question and answer options appear on the screen
 
+    const imageElement = document.getElementById("question-image");
     const questionElement = document.getElementById("question");
     const answerButtonsElement = document.getElementById("answer-options");
+
 
     // Declaring the variable which will determine if they player has the correct item to make the correct answer options appear.
 
@@ -44,10 +46,11 @@ $(document).ready(function () {
         showQuestion(1);
     }
 
-    // The function which determines which question and answer options come up on the screen.
+    // The function which determines which image, question and answer options come up on the screen.
 
     function showQuestion(questionNodeIndex) {
         const questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
+        imageElement.innerHTML = questionNode.image;
         questionElement.innerText = questionNode.question;
         while (answerButtonsElement.firstChild) {
             answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -102,6 +105,7 @@ $(document).ready(function () {
                     nextAnswer: 3,
                 },
             ],
+            image: '<img src="assets/images/moonlit-meadow.jpg" alt="A Full moon shines over a dark meadow" width="265" height="200" />',
         },
         {
             id: 2,
@@ -126,6 +130,7 @@ $(document).ready(function () {
                     nextAnswer: -1,
                 },
             ],
+            image: '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />',
         },
         {
             id: 4,
@@ -183,7 +188,8 @@ $(document).ready(function () {
                     text: "Restart?",
                     nextAnswer: -1,
                 },
-            ],            
+            ],
+            image: '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />',          
         },
         {
             id: 8,
@@ -193,7 +199,8 @@ $(document).ready(function () {
                     text: "Restart?",
                     nextAnswer: -1,
                 },
-            ],            
+            ],
+            image: '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />',           
         },
         {
             id: 9,
@@ -222,7 +229,8 @@ $(document).ready(function () {
                     text: "Restart?",
                     nextAnswer: -1,
                 },
-            ],            
+            ],
+            image: '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />',          
         },
         {
             id: 11,
@@ -281,6 +289,7 @@ $(document).ready(function () {
                     nextAnswer: -1,
                 },
             ],
+            image: '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />',
         },
         {
             id: 16,
@@ -291,6 +300,7 @@ $(document).ready(function () {
                     nextAnswer: -1,
                 },
             ],
+            image: '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />',
         },
         {
             id: 17,
@@ -315,6 +325,7 @@ $(document).ready(function () {
                     nextAnswer: -1,
                 },
             ],
+            image: '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />',
         },
     ];
     playGame();
