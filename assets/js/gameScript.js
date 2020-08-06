@@ -28,7 +28,7 @@ $(document).ready(function () {
     let items = {};
 
     function playGame() {
-        items: {};
+        items: {}
         showQuestion(1);
     }
 
