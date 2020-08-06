@@ -292,6 +292,7 @@ $(document).ready(function () {
                     nextAnswer: 19,
                 },
             ],
+            image: '',
         },
         {
             id: 15,
