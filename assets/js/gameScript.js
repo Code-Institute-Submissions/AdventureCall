@@ -98,7 +98,7 @@ $(document).ready(function () {
                     nextAnswer: 4,
                 },
                 {
-                    text: "Explore the eastern passagway",
+                    text: "Explore the eastern passageway",
                     nextAnswer: 5,
                 },
             ],
