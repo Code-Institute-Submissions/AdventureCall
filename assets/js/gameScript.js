@@ -238,7 +238,7 @@ $(document).ready(function () {
         },
         {
             id: 14,
-            question: "You walk into a treasure filled room and a wizard inside bestows upon you magical wizard powers which give you control over all the beasts in the castle. Hes says, You have a good heart and are a true warrior,",
+            question: "You walk into a treasure filled room and a wizard inside bestows upon you magical wizard powers which give you control over all the beasts in the castle. He says, You have a good heart and are a true warrior and disappears in a puff of smoke leaving the treasure and castle to you",
             answers: [
                 {
                     text: "Restart Game?",
@@ -282,7 +282,7 @@ $(document).ready(function () {
         },
         {
             id: 18,
-            question: "The roofer gladly accepts your help and hands you a bucket of nails.  It's very heavy and you overbalance.  A gust of wind whisks you off the roof to your death",
+            question: "The roofer gladly accepts your help and hands you a bucket of nails.  It's very heavy and you overbalance.  A gust of wind whisks you off the roof and you fall to your death",
             answers: [
                 {
                     text: "Restart?",
