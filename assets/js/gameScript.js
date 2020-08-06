@@ -5,6 +5,7 @@ $(document).ready(function () {
             alert ('Name not entered!')
         } else {
         let welcomeGreeting = `Welcome, ${playerName}`;
+        let endMessage = `You have done well in your quest, ${playerName}`;
         $("#welcome").removeClass("hide");
         $("#welcome").addClass("show");
         $("#welcome").text(welcomeGreeting);
@@ -12,8 +13,14 @@ $(document).ready(function () {
         $("#welcome-screen").addClass("hide");
         $("#game-screen").removeClass("hide");
         $("#game-screen").addClass("show");
+        $("#end-message").text(endMessage);
         }
     });
+
+    $("#reload").click(function () {
+        location.reload();
+    });
+
 
     const questionElement = document.getElementById("question");
     const answerButtonsElement = document.getElementById("answer-options");
@@ -52,7 +59,13 @@ $(document).ready(function () {
     function pickedAnswer(answer) {
         const questionNodeIndex = answer.nextAnswer;
         items = Object.assign(items, answer.addState);
-        if (questionNodeIndex <= 0) {
+        if (questionNodeIndex == 19) {
+            $("#game-screen").addClass("hide");
+            $("#end-screen").removeClass("hide");
+            $("#end-screen").addClass("show");
+            return
+        }
+        else if (questionNodeIndex <= 0) {
             items = {};
             return playGame();
         }
@@ -241,8 +254,8 @@ $(document).ready(function () {
             question: "You walk into a treasure filled room and a wizard inside bestows upon you magical wizard powers which give you control over all the beasts in the castle. He says, You have a good heart and are a true warrior and disappears in a puff of smoke leaving the treasure and castle to you",
             answers: [
                 {
-                    text: "Restart Game?",
-                    nextAnswer: -1,
+                    text: "End Game",
+                    nextAnswer: 19,
                 },
             ],
         },
