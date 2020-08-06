@@ -1,4 +1,10 @@
+//Document ready function ensures page loads fully before any javascript is run
+
 $(document).ready(function () {
+
+    // This function takes the player's entered name and adds it to the welcome and end screen
+    // It then hides the welcome screen and opens up the main game screen when the start game button is clicked
+
     $("#start-game").click(function () {
         let playerName = $("#player-name").val();
         if (playerName == null || playerName == "") {
@@ -17,20 +23,28 @@ $(document).ready(function () {
         }
     });
 
+    //The function below reloads the page.  It is used at the end of the game to go back to the very beginning
+
     $("#reload").click(function () {
         location.reload();
     });
 
+    // Declaring the variables which will determine which question and answer options appear on the screen
 
     const questionElement = document.getElementById("question");
     const answerButtonsElement = document.getElementById("answer-options");
 
+    // Declaring the variable which will determine if they player has the correct item to make the correct answer options appear.
+
     let items = {};
 
+    // The function which makes the first question appear.  It takes the ID number from the questionNodes object.
+
     function playGame() {
-        items: {}
         showQuestion(1);
     }
+
+    // The function which determines
 
     function showQuestion(questionNodeIndex) {
         const questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
@@ -139,7 +153,6 @@ $(document).ready(function () {
                 {
                     text: "Use skeleton finger as a key on the locked gate",
                     stateRequired: (currentGameState) => currentGameState.skeletonFinger,
-                    addState: {},
                     nextAnswer: 6,
                 },
                 {

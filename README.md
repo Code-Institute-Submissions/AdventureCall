@@ -97,7 +97,9 @@ Written content by Mark Johnston
 
 ## Influences
 
+The inspiration behind the code of the game is this youtube video
 
+https://www.youtube.com/watch?v=R1S_NhKkvGA
 
 ## Acknowledgements
 
