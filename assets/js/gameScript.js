@@ -23,13 +23,13 @@ $(document).ready(function () {
         }
     });
 
-    //The function below reloads the page.  It is used at the end of the game to go back to the very beginning
+    //The function below reloads the page.  It is used at the end of the game to go back to the very beginning.
 
     $("#reload").click(function () {
         location.reload();
     });
 
-    // Declaring the variables which will determine which question and answer options appear on the screen
+    // Declaring the variables which will determine which image, question and answer options appear on the screen.
 
     const imageElement = document.getElementById("question-image");
     const questionElement = document.getElementById("question");
@@ -47,7 +47,11 @@ $(document).ready(function () {
     }
 
     // The function which determines which image, question and answer options come up on the screen.
-    // It creates the variable questionNode which looks in the questionNodes array to find the question ID
+    // It creates the variable questionNode. To do this it looks in the questionNodes array to find the question ID and then creates the variable based on this.
+    // It then loads the image element from the image and question information in the variable.
+    // It then removes all the children from the answer button element by seeing that it initially has a child then removing this information.
+    // Then it creates buttons for the answer elements and a click listener which triggers the pickedAnswer function.
+    //This also removes the initial welcome screen form the display.
 
     function showQuestion(questionNodeIndex) {
         const questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
@@ -71,17 +75,18 @@ $(document).ready(function () {
     }
 
     function showAnswer(answer) {
-        return answer.stateRequired == null || answer.stateRequired(items);
-    }
+         return answer.itemRequired == null || answer.itemRequired(items);
+     }
 
 
-    // The function below creates the questionNodeIndex variable from the answer from showQuestion function
-    // it then checks the answer id to see if the character picks up any items.
-    // it also checks the answer and if it is answer 19 the function will take the user to the end screen
+    // The function below creates the questionNodeIndex variable from the answer from showQuestion function.
+    // it then checks the answer id to see if the character picks up any items and adds them to the items variable.
+    // it also checks the answer and if it is answer 19 the function will take the user to the end screen.
+    // if the answer is less than or equal to zero the game restarts.
 
     function pickedAnswer(answer) {
         const questionNodeIndex = answer.nextAnswer;
-        items = Object.assign(items, answer.addState);
+        items = Object.assign(items, answer.addItem);
         if (questionNodeIndex == 19) {
             $("#game-screen").addClass("hide");
             $("#end-screen").removeClass("hide");
@@ -95,7 +100,8 @@ $(document).ready(function () {
         showQuestion(questionNodeIndex);
     }
 
-
+    // The questionNodes array provides the information for the question Nodes which appear on screen.
+    // They can also add items when the picked answer function is called.
 
     const questionNodes = [
         {
@@ -149,7 +155,7 @@ $(document).ready(function () {
                 },
                 {
                     text: "Take Finger from skeleton and travel along the eastern passageway",
-                    addState: { skeletonFinger: true },
+                    addItem: { skeletonFinger: true },
                     nextAnswer: 5,
                 },
                 {
@@ -165,7 +171,7 @@ $(document).ready(function () {
             answers: [
                 {
                     text: "Use skeleton finger as a key on the locked gate",
-                    stateRequired: (currentGameState) => currentGameState.skeletonFinger,
+                    itemRequired: (currentGameState) => currentGameState.skeletonFinger,
                     nextAnswer: 6,
                 },
                 {
@@ -222,7 +228,7 @@ $(document).ready(function () {
                 },
                 {
                     text: "Take key",
-                    addState: { trollKey: true },
+                    addItem: { trollKey: true },
                     nextAnswer: 11,
                 },
                 {
@@ -249,7 +255,7 @@ $(document).ready(function () {
             answers: [
                 {
                     text: "Try to use key to lock door behind you?",
-                    stateRequired: (currentGameState) => currentGameState.trollKey,
+                    itemRequired: (currentGameState) => currentGameState.trollKey,
                     nextAnswer: 16,
                 },
                 {
@@ -277,7 +283,7 @@ $(document).ready(function () {
                 },
                 {
                     text: "Open Door",
-                    stateRequired: (currentGameState) => currentGameState.trollKey,
+                    itemRequired: (currentGameState) => currentGameState.trollKey,
                     nextAnswer: 14,
                 },
             ],
