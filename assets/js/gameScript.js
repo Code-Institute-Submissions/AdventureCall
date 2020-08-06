@@ -44,7 +44,7 @@ $(document).ready(function () {
         showQuestion(1);
     }
 
-    // The function which determines
+    // The function which determines which question and answer options come up on the screen.
 
     function showQuestion(questionNodeIndex) {
         const questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
