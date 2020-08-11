@@ -5,11 +5,9 @@ $(document).ready(function () {
     // This function takes the player's entered name and adds it to the welcome and end screen
     // It then hides the welcome screen and opens up the main game screen when the start game button is clicked
 
-    $("#start-game").click(function () {
-        const playerName = $("#player-name").val();
-        if (playerName == null || playerName == "") {
-            alert ('Name not entered!')
-        } else {
+    let playerName = "";
+    
+    function runWelcomeScreen() {
         const welcomeGreeting = `Welcome, ${playerName}`;
         const endMessage = `You have done well in your quest, ${playerName}`;
         $("#welcome").removeClass("hide");
@@ -20,6 +18,15 @@ $(document).ready(function () {
         $("#game-screen").removeClass("hide");
         $("#game-screen").addClass("show");
         $("#end-message").text(endMessage);
+    }
+
+
+    $("#start-game").click(function () {
+        playerName = $("#player-name").val();
+        if (playerName == null || playerName == "") {
+            alert ('Name not entered!')
+        } else {
+            runWelcomeScreen();
         }
     });
 
