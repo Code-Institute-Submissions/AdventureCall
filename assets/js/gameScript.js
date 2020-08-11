@@ -1,13 +1,32 @@
-//Document ready function ensures page loads fully before any javascript is run
-
 $(document).ready(function () {
 
-    // This function takes the player's entered name and adds it to the welcome and end screen
-    // It then hides the welcome screen and opens up the main game screen when the start game button is clicked
+    const imageElement = document.getElementById("question-image");
+    const questionElement = document.getElementById("question");
+    const answerButtonsElement = document.getElementById("answer-options");
 
     let playerName = "";
-    
+    let items = {};
+    let questionNode = 0;
+
+    // This function takes account of the player's name.
+    // It also checks to see if any information has been left empty or starts with a blank space to make sure a name is entered.
+    // It runs the Welcome Screen if a name is entered.
+
+    $("#start-game").click(function () {
+        playerName = $("#player-name").val();
+        if (playerName == null || playerName.charAt(0) == " ") {
+            alert ('Name not entered!');
+        } else {
+            runWelcomeScreen();
+        }
+    });
+
+    // This function displays the welcome with a greeting for the player a the top of the first question.
+    // It adds the player's name to the end screen to so that it's there is the player gets that far.
+    // It also starts the game.
+
     function runWelcomeScreen() {
+        playGame();
         const welcomeGreeting = `Welcome, ${playerName}`;
         const endMessage = `You have done well in your quest, ${playerName}`;
         $("#welcome").removeClass("hide");
@@ -20,47 +39,13 @@ $(document).ready(function () {
         $("#end-message").text(endMessage);
     }
 
-
-    $("#start-game").click(function () {
-        playerName = $("#player-name").val();
-        if (playerName == null || playerName.charAt(0) == " ") {
-            alert ('Name not entered!');
-        } else {
-            runWelcomeScreen();
-        }
-    });
-
-    //The function below reloads the page.  It is used at the end of the game to go back to the very beginning.
-
-    $("#reload").click(function () {
-        location.reload();
-    });
-
-    // Declaring the variables which will determine which image, question and answer options appear on the screen.
-
-    const imageElement = document.getElementById("question-image");
-    const questionElement = document.getElementById("question");
-    const answerButtonsElement = document.getElementById("answer-options");
-
-
-    // Declaring the variable which will determine if they player has the correct item to make the correct answer options appear.
-
-    let items = {};
-
-    // The function which makes the first question appear.  It takes the ID number from the questionNodes object.
+    //  This function starts the game and shows the first question.
 
     function playGame() {
         showQuestion(1);
     }
 
-    // The function which determines which image, question and answer options come up on the screen.
-    // It creates the variable questionNode. To do this it looks in the questionNodes array to find the question ID and then creates the variable based on this.
-    // It then loads the image element from the image and question information in the variable.
-    // It then removes all the children from the answer button element by seeing that it initially has a child then removing this information.
-    // Then it creates buttons for the answer elements and a click listener which triggers the pickedAnswer function.
-    // This also removes the initial welcome screen from the display.
-
-    let questionNode = 0;
+    // This function displays the image and question text from the questionNodes varaible based on which answer parameter has been passed in.
 
     function showQuestion(questionNodeIndex) {
         questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
@@ -72,9 +57,18 @@ $(document).ready(function () {
         showAnswerOptions();
     }
 
+    //  This function checks to see if the character is holding any items that are required.
+
+    function checkItems(answer) {
+         return answer.itemRequired == null || answer.itemRequired(items);
+     }
+
+     // This function displays the answer options available to the character based on the items being carried.
+     // It also hide the initial welcome screen.
+
     function showAnswerOptions() {
         questionNode.answers.forEach((answer) => {
-            if (showAnswer(answer)) {
+            if (checkItems(answer)) {
                 const button = document.createElement("button");
                 button.innerText = answer.text;
                 button.classList.add("button-style");
@@ -86,17 +80,10 @@ $(document).ready(function () {
         });
     }
 
-    // This function shows the answer options based on whether the answer has a items required to view them.
-
-    function showAnswer(answer) {
-         return answer.itemRequired == null || answer.itemRequired(items);
-     }
-
-
-    // The function below creates the questionNodeIndex variable from the answer from showQuestion function.
-    // it then checks the answer id to see if the character picks up any items and adds them to the items variable.
-    // it also checks the answer and if it is answer 19 the function will take the user to the end screen.
-    // if the answer is less than or equal to zero the game restarts.
+    //  This function moves the character on to the next question based on which answer parameter is passed in by the player.
+    //  It also assigns any items picked up to the character.
+    //  If the player reaches the end of the game this function moves them on to the End Game Screen.
+    //  If the player dies it resets the items the player carries to zero and puts them back to the first question.
 
     function pickedAnswer(answer) {
         const questionNodeIndex = answer.nextAnswer;
@@ -114,5 +101,10 @@ $(document).ready(function () {
         showQuestion(questionNodeIndex);
     }
 
-    playGame();
+    // This function reloads the page if the player wants to go back to the very start once the end of the game has been reached.
+
+    $("#reload").click(function () {
+        location.reload();
+    });
+
 });
