@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
-        if (playerName == null || playerName == "") {
+        if (playerName == null || playerName.charAt(0) == " ") {
             alert ('Name not entered!');
         } else {
             runWelcomeScreen();

@@ -37,6 +37,7 @@ body {
 .hide {
     visibility: hidden;
     position: absolute;
+    
 }
 
 .welcome-style{
