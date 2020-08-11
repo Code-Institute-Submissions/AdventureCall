@@ -24,7 +24,7 @@ $(document).ready(function () {
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
         if (playerName == null || playerName == "") {
-            alert ('Name not entered!')
+            alert ('Name not entered!');
         } else {
             runWelcomeScreen();
         }
@@ -60,14 +60,19 @@ $(document).ready(function () {
     // Then it creates buttons for the answer elements and a click listener which triggers the pickedAnswer function.
     // This also removes the initial welcome screen from the display.
 
+    let questionNode = 0;
+
     function showQuestion(questionNodeIndex) {
-        const questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
+        questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
         imageElement.innerHTML = questionNode.image;
         questionElement.innerText = questionNode.question;
         while (answerButtonsElement.firstChild) {
             answerButtonsElement.removeChild(answerButtonsElement.firstChild);
         }
+        showAnswerOptions();
+    }
 
+    function showAnswerOptions() {
         questionNode.answers.forEach((answer) => {
             if (showAnswer(answer)) {
                 const button = document.createElement("button");
@@ -100,9 +105,9 @@ $(document).ready(function () {
             $("#game-screen").addClass("hide");
             $("#end-screen").removeClass("hide");
             $("#end-screen").addClass("show");
-            return
+            return;
         }
-        else if (questionNodeIndex <= 0) {
+        else if (questionNodeIndex < 1) {
             items = {};
             return playGame();
         }
