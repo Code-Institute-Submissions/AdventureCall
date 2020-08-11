@@ -89,7 +89,7 @@ $(document).ready(function () {
     function pickedAnswer(answer) {
         const questionNodeIndex = answer.nextAnswer;
         items = Object.assign(items, answer.addItem);
-        if (questionNodeIndex == 19) {
+        if (questionNodeIndex > questionNodes.length) {
             $("#game-screen").addClass("hide");
             $("#end-screen").removeClass("hide");
             $("#end-screen").addClass("show");
