@@ -51,7 +51,7 @@ $(document).ready(function () {
     // It then loads the image element from the image and question information in the variable.
     // It then removes all the children from the answer button element by seeing that it initially has a child then removing this information.
     // Then it creates buttons for the answer elements and a click listener which triggers the pickedAnswer function.
-    //This also removes the initial welcome screen form the display.
+    // This also removes the initial welcome screen from the display.
 
     function showQuestion(questionNodeIndex) {
         const questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
@@ -73,6 +73,8 @@ $(document).ready(function () {
             }
         });
     }
+
+    // This function shows the answer options based on whether the answer has a items required to view them.
 
     function showAnswer(answer) {
          return answer.itemRequired == null || answer.itemRequired(items);
