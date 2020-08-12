@@ -47,7 +47,6 @@ body {
 
 .question-style{
     font-family: 'Open Sans';
-    padding: 10px;
 }
 
 .buttons{
@@ -60,11 +59,24 @@ body {
     margin: auto;
 }
 
+.input-style {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+}
+
 .button-style {
     font-family: 'Open Sans';
     background-color: rgb(134, 92, 19);
     color: #f8f8f8;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     border: none;
+}
+
+.button-style:hover {
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
+    box-shadow: inset 0 0 0 1.5px #d4af37, 0 0 1px rgba(0, 0, 0, 0);
 }
