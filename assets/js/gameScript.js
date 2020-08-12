@@ -36,6 +36,7 @@ $(document).ready(function () {
         $("#welcome").removeClass("hide");
         $("#welcome").addClass("show");
         $("#welcome").text(welcomeGreeting);
+        $("#welcome-screen").removeClass("question-container");
         $("#welcome-screen").removeClass("show");
         $("#welcome-screen").addClass("hide");
         $("#game-screen").removeClass("hide");
