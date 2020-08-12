@@ -13,6 +13,7 @@ $(document).ready(function () {
     // This function takes account of the player's name.
     // It also checks to see if a name has actually been entered.
     // It runs the Welcome Screen if a name is entered.
+    // and goes to the no name screen if there's nothing entered.
 
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
@@ -25,6 +26,8 @@ $(document).ready(function () {
             runWelcomeScreen();
         }
     });
+
+    // This function sends the player back to the welcome screen from the no name screen.
 
     $("#go-back").click(function () {
         $("#no-name-screen").removeClass("show");
