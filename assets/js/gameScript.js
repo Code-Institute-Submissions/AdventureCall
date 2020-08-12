@@ -26,6 +26,13 @@ $(document).ready(function () {
         }
     });
 
+    $("#go-back").click(function () {
+        $("#no-name-screen").removeClass("show");
+        $("#no-name-screen").addClass("hide");
+        $("#welcome-screen").removeClass("hide");
+        $("#welcome-screen").addClass("show");
+    });
+
     // This function displays the welcome with a greeting for the player a the top of the first question.
     // It adds the player's name to the end screen to so that it's there is the player gets that far.
     // It also starts the game.
@@ -44,6 +51,7 @@ $(document).ready(function () {
         $("#game-screen").addClass("show");
         $("#end-message").text(endMessage);
     }
+
 
     //  This function starts the game and shows the first question.
 
