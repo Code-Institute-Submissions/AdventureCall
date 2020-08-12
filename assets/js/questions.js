@@ -196,7 +196,7 @@
                     nextAnswer: 19,
                 },
             ],
-            image: '',
+            image: '<img src="assets/images/wizard.png" alt="A cartoon wizard" width="265" height="200" />',
         },
         {
             id: 15,

@@ -17,7 +17,10 @@ $(document).ready(function () {
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
         if (!playerName || playerName.charAt(0) == " ") {
-            alert("Please enter a valid name!");
+            $("#welcome-screen").removeClass("show");
+            $("#welcome-screen").addClass("hide");
+            $("#no-name-screen").removeClass("hide");
+            $("#no-name-screen").addClass("show");
         } else {
             runWelcomeScreen();
         }
