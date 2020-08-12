@@ -2,7 +2,6 @@
 // It was found at the  Web Dev Simplified Youtube Channel https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
 
 $(document).ready(function () {
-
     const imageElement = document.getElementById("question-image");
     const questionElement = document.getElementById("question");
     const answerButtonsElement = document.getElementById("answer-options");
@@ -18,9 +17,9 @@ $(document).ready(function () {
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
         if (!playerName || playerName.charAt(0) == " ") {
-            alert('Please enter a valid name!')
+            alert("Please enter a valid name!");
         } else {
-        runWelcomeScreen();
+            runWelcomeScreen();
         }
     });
 
@@ -64,11 +63,11 @@ $(document).ready(function () {
     //  This function checks to see if the character is holding any items that are required.
 
     function checkItems(answer) {
-         return answer.itemRequired == null || answer.itemRequired(items);
-     }
+        return answer.itemRequired == null || answer.itemRequired(items);
+    }
 
-     // This function displays the answer options available to the character based on the items being carried.
-     // It also hide the initial welcome screen.
+    // This function displays the answer options available to the character based on the items being carried.
+    // It also hide the initial welcome screen.
 
     function showAnswerOptions() {
         questionNode.answers.forEach((answer) => {
@@ -97,8 +96,7 @@ $(document).ready(function () {
             $("#end-screen").removeClass("hide");
             $("#end-screen").addClass("show");
             return;
-        }
-        else if (questionNodeIndex < 1) {
+        } else if (questionNodeIndex < 1) {
             items = {};
             return playGame();
         }
@@ -110,5 +108,4 @@ $(document).ready(function () {
     $("#reload").click(function () {
         location.reload();
     });
-
 });

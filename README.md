@@ -29,6 +29,12 @@ Basic wireframes for this project were created using Balsamiq and you can find a
 
 ## Colour Scheme
 
+The colour scheme of brown/grey/gold/black used was based on the Adventure Call logo from Limmy's show.  This was used as the logo for the screen and the colours on the screen where influenced
+by this.  [Coolors](https://coolors.co/) was used to find the exact matches.  The brown colour was amended slightly for the buttons to be darkerthan the logo brown and thus create higher contrast.
+This action created a higher contrast between foreground and background colours to improve accessability from vision impaired users.
+
+The container for the questions was made a slightly darker grey to match the skull used for the death screens.
+
 ### Features
 
 #### Welcome Screen
@@ -65,6 +71,9 @@ To manipulate the HTML and CSS on the screen.
 
 [JShint](https://jshint.com/)
 To validate javscript code.
+
+[Coolors](https://coolors.co/)
+For help with colours and colours scheme.
 
 [Asana](https://asana.com/)
 for project management
