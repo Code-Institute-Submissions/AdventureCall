@@ -119,6 +119,10 @@ How to center an absolute element
 
 https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element
 
+Hover Effect
+
+https://ianlunn.github.io/Hover/
+
 ## Acknowledgements
 
 Thanks to the following people for making the project happen:

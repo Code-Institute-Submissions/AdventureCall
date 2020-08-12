@@ -42,11 +42,12 @@ body {
 
 .welcome-style{
     font-family: 'MedievalSharp';
-    padding: 10px;
+    margin: 10px;
 }
 
 .question-style{
     font-family: 'Open Sans';
+    margin: 10px;
 }
 
 .buttons{
@@ -55,7 +56,6 @@ body {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
-    margin-top: 20px;
     margin: auto;
 }
 
