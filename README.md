@@ -160,7 +160,7 @@ https://ianlunn.github.io/Hover/
 
 Thanks to the following people for making the project happen:
 
-- My Mentor
+- My  Antonija Šimić
 - The [Code Institute](https://codeinstitute.net/) Slack Community.
 - The [Code Institute](https://codeinstitute.net/) tutors and instructional material.  Tutor Stephen for his pep talk. Tutor Miklos for his perserverance.  Tutor Xavier for his excellent resources.
-- My Wife Joanna Johnston for her (contructive) criticism and understanding when I lock myself away in the attic for hours on end
+- My Wife Joanna Johnston for her (constructive) criticism and understanding when I lock myself away in the attic for hours on end
