@@ -62,9 +62,9 @@ body {
 
 .button-style {
     font-family: 'Open Sans';
-    background-color: #A86900;
+    background-color: rgb(134, 92, 19);
     color: #f8f8f8;
     border-radius: 5px;
     padding: 10px;
-    outline: none;
+    border: none;
 }

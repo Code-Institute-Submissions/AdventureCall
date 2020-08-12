@@ -9,15 +9,16 @@ $(document).ready(function () {
     let questionNode = 0;
 
     // This function takes account of the player's name.
-    // It also checks to see if any information has been left empty or starts with a blank space to make sure a name is entered.
+    // It also checks to see if a name has actually been entered.
     // It runs the Welcome Screen if a name is entered.
 
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
-        if (playerName == null || playerName.charAt(0) == " ") {
-            alert ('Name not entered!');
+        console.log(playerName);
+        if (!playerName) {
+            alert('Please enter a name!')
         } else {
-            runWelcomeScreen();
+        runWelcomeScreen();
         }
     });
 
