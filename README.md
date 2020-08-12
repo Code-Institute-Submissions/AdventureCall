@@ -2,6 +2,8 @@
 <h1>Adventure Call</h1>
 </div>
 
+![](readme/intro-picture.png)
+
 Welcome traveller!
 
 This is a text adventure game similar to Dungeons and Dragons based on scottish tv comedy program maker Limmy's 'Adventure Call' sketch series.
@@ -14,7 +16,7 @@ To go to the live site click [here](!)
 ## User Stories
 
 As a user/player of the game I want to have a fun experience with some pay off at the end.
-As a user/plyaer of the game I want some kind of personalisation of my experience so that I can feel more connected to the experience.
+As a user/player of the game I want some kind of personalisation of my experience so that I can feel more connected to the experience.
 As a fan of fantasy/role playing games I want references to the tropes associated with these games.
 As a fan of the original limmy sketch I want to have references to the show so that it will make the game more fun.
 
