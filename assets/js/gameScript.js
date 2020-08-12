@@ -1,3 +1,6 @@
+// The inspiration for this project came form this game https://github.com/WebDevSimplified/JavaScript-Text-Adventure/blob/master/game.js
+// It was found at the  Web Dev Simplified Youtube Channel https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
+
 $(document).ready(function () {
 
     const imageElement = document.getElementById("question-image");

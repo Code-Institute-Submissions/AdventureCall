@@ -72,3 +72,7 @@ debug: removed add states except for those required.  Added extra steps so that 
 Bug: Previous States showing when new game starts.
 
 debug: console logging 'items' in pickedAnswer function to find scope and resetting items to {}
+
+Bug: Name check function form welcome screen wasn't working.
+
+debug: re-wrote function.  suspect syntax error initally.

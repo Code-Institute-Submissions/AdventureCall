@@ -95,11 +95,29 @@ Written content by Mark Johnston
 
 ## Media
 
+https://www.animatedimages.org/data/media/492/animated-fireworks-image-0014.gif
+
 ## Influences
 
 The inspiration behind the code of the game is this youtube video
 
 https://www.youtube.com/watch?v=R1S_NhKkvGA
+
+Debugging vid.
+
+https://www.youtube.com/watch?v=AX7uybwukkk
+
+Node in the DOM
+
+https://www.w3schools.com/js/js_htmldom_nodes.asp#:~:text=To%20add%20a%20new%20element,it%20to%20an%20existing%20element.
+
+Value from textbox input
+
+https://www.tutorialrepublic.com/faq/how-to-get-the-value-in-an-input-text-box-using-jquery.php
+
+How to center an absolute element
+
+https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element
 
 ## Acknowledgements
 
@@ -107,5 +125,5 @@ Thanks to the following people for making the project happen:
 
 - My Mentor
 - The [Code Institute](https://codeinstitute.net/) Slack Community.
-- The [Code Institute](https://codeinstitute.net/) tutors and instructional material.  Tutor Stephen. Tutor Miklos.
+- The [Code Institute](https://codeinstitute.net/) tutors and instructional material.  Tutor Stephen for his pep talk. Tutor Miklos for his perserverance.  Tutor Xavier for his excellent resources.
 - My Wife Joanna Johnston for her (contructive) criticism and understanding when I lock myself away in the attic for hours on end

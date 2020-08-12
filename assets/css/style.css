@@ -67,6 +67,7 @@ body {
 
 .button-style {
     font-family: 'Open Sans';
+    font-size: 50;
     background-color: rgb(134, 92, 19);
     color: #f8f8f8;
     border-radius: 5px;
