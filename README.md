@@ -4,11 +4,12 @@
 
 ![](readme/intro-picture.png)
 
-Welcome traveller!
+Greetings traveller!
 
-This is a text adventure game similar to Dungeons and Dragons based on scottish tv comedy program maker Limmy's 'Adventure Call' sketch series.
+This is a text adventure game similar to Dungeons and Dragons based on scottish tv comedy program maker Limmy's 'Adventure Call' sketch series.  The game can
+bring up different answer options based on what items you have picked up.  Can you make it all the way to the end for a special treat?
 
-To go to the live site click [here](!)
+To go to the live site click [here](https://markj0hnst0n.github.io/AdventureCall/)
 
 
 # UX
@@ -29,6 +30,22 @@ Basic wireframes for this project were created using Balsamiq and you can find a
 ## Colour Scheme
 
 ### Features
+
+#### Welcome Screen
+
+- User is welcomed by Falconhoof.  A familiar character for fans of the show.
+
+#### Name input box
+
+- allows all users to enter their name and returns an error message if no name is entered
+
+#### The game itself
+
+- Brings up questions and answers for the player based on what items the player is holding.  Players answer questions in the hope fo making it to the end of the game without dying.
+
+#### End Screen
+
+- A final screen with a personalised greeting and an animated treat for any users making it to the end.  This screen gives the option to start all over again from the very beginnning.
 
 ## Features left to impliment
 

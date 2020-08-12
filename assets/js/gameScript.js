@@ -17,9 +17,8 @@ $(document).ready(function () {
 
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
-        console.log(playerName);
-        if (!playerName) {
-            alert('Please enter a name!')
+        if (!playerName || playerName.charAt(0) == " ") {
+            alert('Please enter a valid name!')
         } else {
         runWelcomeScreen();
         }
