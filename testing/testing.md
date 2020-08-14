@@ -8,6 +8,8 @@ Initial testing was completed on a Macbook Pro running Chrome Browser
 
 As a user/player of the game I want to have a fun experience with some pay off at the end.
 
+
+
 The following devices were emulated on Google Chrome developer tools running the site with no issues:
 
 
@@ -60,3 +62,4 @@ Devices emulated are as follows:
 | Restart message appeared on question 5 even when player has correct item | removed add states except for those required.  Added extra steps so that next step gave restart option.
 | Previous States showing when new game starts. | Console logged 'items' in pickedAnswer function to find scope and reset items to {} when player has to go back to the first question.
 | Name check function form welcome screen wasn't working. | Re-wrote function.  suspect syntax error initally.
+| When enter key is pressed on welcome screen the game doesn't move to the next screen | Added event lister for enter to run the function to move the game on to the next stage when enter is ----------

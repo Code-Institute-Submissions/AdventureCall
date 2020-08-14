@@ -10,6 +10,8 @@ $(document).ready(function () {
     let items = {};
     let questionNode = 0;
 
+    
+
     // This function takes account of the player's name.
     // It also checks to see if a name has actually been entered.
     // It runs the Welcome Screen if a name is entered.
@@ -26,6 +28,20 @@ $(document).ready(function () {
             runWelcomeScreen();
         }
     });
+
+    $(document).keypress(function(event) {
+    if (event.key === "Enter") {
+        playerName = $("#player-name").val();
+        if (!playerName || playerName.charAt(0) == " ") {
+            $("#welcome-screen").removeClass("show");
+            $("#welcome-screen").addClass("hide");
+            $("#no-name-screen").removeClass("hide");
+            $("#no-name-screen").addClass("show");
+        } else {
+            runWelcomeScreen();
+        }
+    }
+});
 
     // This function sends the player back to the welcome screen from the no name screen.
 
