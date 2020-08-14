@@ -75,6 +75,12 @@ To validate javscript code.
 [Coolors](https://coolors.co/)
 For help with colours and colours scheme.
 
+[PicResize](https://picresize.com/)
+For image formatting.
+
+[Webformatter](https://webformatter.com/)
+For formatting code.
+
 [Asana](https://asana.com/)
 for project management
 
@@ -101,7 +107,7 @@ See separate Testing.md file [here](testing/testing.md)
 
 ## Using Github Pages
 
-In the GitHub Repository from the project (!)
+In the GitHub Repository from the project (https://github.com/markj0hnst0n/AdventureCall)
 
 1. Click the 'Settings' Tab.
 2. Scroll Down to the Git Hub Pages Heading.
@@ -112,7 +118,7 @@ In the GitHub Repository from the project (!)
 
 ## Run Locally
 
-In the GitHub Repository from the project (!)
+In the GitHub Repository from the project (https://github.com/markj0hnst0n/AdventureCall)
 
 1. Click Clone or Download
 2. Copy Git URL from the dialogue box
@@ -132,7 +138,7 @@ https://www.animatedimages.org/data/media/492/animated-fireworks-image-0014.gif
 
 ## Influences
 
-The inspiration behind the code of the game is this youtube video
+The inspiration behind the code of the game is from this youtube video
 
 https://www.youtube.com/watch?v=R1S_NhKkvGA
 
@@ -156,11 +162,15 @@ Hover Effect
 
 https://ianlunn.github.io/Hover/
 
+let, var, const usage
+
+https://www.youtube.com/watch?v=sjyJBL5fkp8&amp;t=10s
+
 ## Acknowledgements
 
 Thanks to the following people for making the project happen:
 
-- My  Antonija Šimić
+- My Mentor Antonija Šimić
 - The [Code Institute](https://codeinstitute.net/) Slack Community.
 - The [Code Institute](https://codeinstitute.net/) tutors and instructional material.  Tutor Stephen for his pep talk. Tutor Miklos for his perserverance.  Tutor Xavier for his excellent resources.
 - My Wife Joanna Johnston for her (constructive) criticism and understanding when I lock myself away in the attic for hours on end
