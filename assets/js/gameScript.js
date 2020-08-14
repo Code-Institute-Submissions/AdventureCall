@@ -29,6 +29,8 @@ $(document).ready(function () {
         }
     });
 
+    // Function to recognise if enter key is hit to 
+
     $(document).keypress(function(event) {
     if (event.key === "Enter") {
         playerName = $("#player-name").val();

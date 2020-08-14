@@ -4,11 +4,23 @@
 
 Initial testing was completed on a Macbook Pro running Chrome Browser
 
-# User Stories tests
+### User Stories tests
 
-As a user/player of the game I want to have a fun experience with some pay off at the end.
+- As a user/player of the game I want to have a fun experience with some pay off at the end.
 
+This game has been tested on various users including friends and family members.  Most around 30-35 age group.
+The users were familiar with the sketch show that the game is based on except for my wife but she enjoyed the
+fantasy aspect of the game.  Users felt that there could have been more references to the show and there was
+a suggestion that there could have been more interaction between the player and the guide character Falconhoof.
+Overall the testers thought that the main objective of the first user story was met as the game was enjoyable to workout
+and the little fireworks gif at the end provided a nice bookend to the experience.
 
+After the intial tests I found that it was a bit more intuative to hit enter to start the initial game after typing in your name so
+this funtionality was added into the game to improve user experience.
+
+Below are some gameplay screenshots including the final fireworks sequence.
+
+![homepage_w3c_html_validator_screenshot](assets/readme.deathSS.png)
 
 The following devices were emulated on Google Chrome developer tools running the site with no issues:
 
