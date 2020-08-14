@@ -2,7 +2,7 @@
 
 ### On all Listed Devices the following tests were performed:
 
-Initial testing was completed on a Macbook Pro running Chrome Browser
+Initial testing was completed on a Macbook Pro running Chrome Browser and Samsung S10 phone.
 
 ### User Stories tests
 
@@ -28,6 +28,23 @@ The option of entering the player's name has been used to personalise the user e
 user.  This can be seen in the fireworks screenshot above and also the intial welcome screens of the game below.
 
 ![Welcome_Screen](readme/falconhoof-welcomeSS.png) ![First_Question_Screen](readme/moonlit-meadowSS.png)
+
+- As a fan of fantasy/role playing games I want references to the tropes associated with these games.
+
+Throughout the game reference is made to common stock characters and situations found within the fantasy/roleplaying genre.  Examples
+include Trolls, wizards, golden amulets and castle towers!  This helps to create a familiar world for the user so that they can use their
+imagination to immerse themselves in the game.  The pictures used further support this and they were chosen for their fun cartoonish
+quality and as good representations of what the text is trying to convey.  This is demonstrated in the moonlit meadow picture above and the death screen shown below.
+
+![Death_Screen](readme/deathSS.png)  ![Troll_Screen](readme/trollSS.png)  
+
+- As a fan of the original limmy sketch I want to have references to the show so that it will make the game more fun.
+
+Users will find that all the situations that are presented from the games have a basis in the original sketches.  Specifically
+the 'Christmas Special' sketch and the 'Greg' sketch.  Users found that the game was lacking in a lot of the humour from the sketches
+and it was found to be a bit more serious.  Fans of the show would have preferred at least one sequence with Jingle the Jester of the
+famous 'Kill Jester' sketch and as mentioned before more interaction with falconhoof would have improved the experience.  Overall
+because of the many references to the show it is felt that the user story above has been achieved.
 
 The following devices were emulated on Google Chrome developer tools running the site with no issues:
 
