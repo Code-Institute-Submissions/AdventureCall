@@ -15,12 +15,19 @@ a suggestion that there could have been more interaction between the player and 
 Overall the testers thought that the main objective of the first user story was met as the game was enjoyable to workout
 and the little fireworks gif at the end provided a nice bookend to the experience.
 
-After the intial tests I found that it was a bit more intuative to hit enter to start the initial game after typing in your name so
+After the intial tests I found that it was a bit more intuitive to hit enter to start the initial game after typing in your name so
 this funtionality was added into the game to improve user experience.
 
 Below are some gameplay screenshots including the final fireworks sequence.
 
-![homepage_w3c_html_validator_screenshot](assets/readme.deathSS.png)
+![Wizard_Screen](readme/wizardSS.png)    ![Fireworks_Screen](readme/fireworksSS.png)
+
+- As a user/player of the game I want some kind of personalisation of my experience so that I can feel more connected to what is going on.
+
+The option of entering the player's name has been used to personalise the user experience so that the game can speak directly to the 
+user.  This can be seen in the fireworks screenshot above and also the intial welcome screens of the game below.
+
+![Welcome_Screen](readme/falconhoof-welcomeSS.png) ![First_Question_Screen](readme/moonlit-meadowSS.png)
 
 The following devices were emulated on Google Chrome developer tools running the site with no issues:
 
