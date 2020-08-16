@@ -78,6 +78,7 @@ $(document).ready(function () {
 
     function playGame() {
         showQuestion(1);
+        timer.start();
     }
 
     // This function displays the image and question text from the questionNodes varaible based on which answer parameter has been passed in.
@@ -127,8 +128,10 @@ $(document).ready(function () {
             $("#game-screen").addClass("hide");
             $("#end-screen").removeClass("hide");
             $("#end-screen").addClass("show");
+            timer.stop();
             return;
         } else if (questionNodeIndex < 1) {
+            timer.reset ();
             items = {};
             return playGame();
         }
@@ -141,3 +144,70 @@ $(document).ready(function () {
         location.reload();
     });
 });
+
+// Timer js below from https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript
+
+class Timer {
+  constructor () {
+    this.isRunning = false;
+    this.startTime = 0;
+    this.overallTime = 0;
+  }
+
+  _getTimeElapsedSinceLastStart () {
+    if (!this.startTime) {
+      return 0;
+    }
+  
+    return Date.now() - this.startTime;
+  }
+
+  start () {
+    if (this.isRunning) {
+      return console.error('Timer is already running');
+    }
+
+    this.isRunning = true;
+
+    this.startTime = Date.now();
+  }
+
+  stop () {
+    if (!this.isRunning) {
+      return console.error('Timer is already stopped');
+    }
+
+    this.isRunning = false;
+
+    this.overallTime = this.overallTime + this._getTimeElapsedSinceLastStart();
+  }
+
+  reset () {
+    this.overallTime = 0;
+
+    if (this.isRunning) {
+      this.startTime = Date.now();
+      return;
+    }
+
+    this.startTime = 0;
+  }
+
+  getTime () {
+    if (!this.startTime) {
+      return 0;
+    }
+
+    if (this.isRunning) {
+      return this.overallTime + this._getTimeElapsedSinceLastStart();
+    }
+
+    return this.overallTime;
+  }
+}
+
+const timer = new Timer();
+setInterval(() => {
+  const timeInSeconds = Math.round(timer.getTime() / 1000);
+  document.getElementById('time').innerText = timeInSeconds;
+}, 100)

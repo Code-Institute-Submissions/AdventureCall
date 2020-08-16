@@ -172,6 +172,10 @@ Adding Event listener for enter key in jQuery
 
 https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
 
+Timer js
+
+https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript
+
 ## Acknowledgements
 
 Thanks to the following people for making the project happen:
