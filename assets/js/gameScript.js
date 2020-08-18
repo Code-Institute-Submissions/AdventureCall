@@ -155,7 +155,8 @@ $(document).ready(function () {
         location.reload();
     });
 
-    // Timer js below from https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript user Tomasz Bubała to create and accurate timer for the game using setinterval.
+    // Timer js below from https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript user Tomasz Bubała to create
+    // an accurate timer for the game using setinterval.
 
     class Timer {
         constructor() {
