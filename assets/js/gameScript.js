@@ -108,7 +108,9 @@ $(document).ready(function () {
                 const button = document.createElement("button");
                 button.innerText = answer.text;
                 button.classList.add("button-style");
-                button.addEventListener("click", () => pickedAnswer(answer));
+                $(button).click(function () {
+                    pickedAnswer(answer);
+                });
                 answerButtonsElement.appendChild(button);
                 $("#welcome").removeClass("show");
                 $("#welcome").addClass("hide");
