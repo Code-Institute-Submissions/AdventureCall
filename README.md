@@ -243,13 +243,13 @@ because of the many references to the show it is felt that the user story above 
 
 - The game starts and the first question appears including any image associated with the question.  The buttons appear correctly.
 
-- The player makes choices based on the answer options given and through the game is given the oppotunity to pick up objects which may help them later in the game.  On the screen where character is at the gate of bones when the character does not have the correct items the single button item is still off centre.  Could have written bespoke code to amend this but left is as is even though it jars slightly.
+- The player makes choices based on the answer options given and through the game is given the oppotunity to pick up objects which may help them later in the game.  On the screen where character is at the gate of bones when the character does not have the correct items the single button item is still off centre.  Could have written bespoke code to amend this but left is as is even though it jars slightly.  The correct options appear based on which item the player currently holds.
 
 - If the player makes a choice which results in death then they are taken back to the first question without the personalised welcome show again.
 
 - If the player makes all the correct choices and reaches the end of the game they are greeted with a personalised message and a gif of a fireworks display.
 
-- At this stage they are given the chance to start from scratch by reloading the page and the name is not held.
+- At this stage they are given the chance to start from scratch by hitting the go back to the beginning button and reloading the page and the name is not held.
 
 The following devices were emulated on Google Chrome developer tools running the site with no issues:
 
