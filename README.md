@@ -202,7 +202,7 @@ a suggestion that there could have been more interaction between the player and 
 Overall the testers thought that the main objective of the first user story was met as the game was enjoyable to workout
 and the little fireworks gif at the end provided a nice bookend to the experience.
 
-After the intial tests I found that it was a bit more intuitive to hit enter to start the initial game after typing in your name so
+After the intial tests I found that it was a bit more intuitive to hit the enter key to start the initial game after typing in your name so
 this funtionality was added into the game to improve user experience.
 
 Below are some gameplay screenshots including the final fireworks sequence.
@@ -243,13 +243,13 @@ because of the many references to the show it is felt that the user story above 
 
 - The game starts and the first question appears including any image associated with the question.  The buttons appear correctly.
 
-- The player makes choices based on the answer options given and through the game is given the oppotunity to pick up objects which may help them later in the game.
+- The player makes choices based on the answer options given and through the game is given the oppotunity to pick up objects which may help them later in the game.  On the screen where character is at the gate of bones when the character does not have the correct items the single button item is still off centre.  Could have written bespoke code to amend this but left is as is even though it jars slightly.
 
-- If the player makes a choice which results in death then they are taken back to the first question without the welcome this time.  On the death screen and any othe screen where 1 button is show the button appears off center due to the grid layout of the buttons.  While this isn't the best solution it was the best way to retain the game logi
+- If the player makes a choice which results in death then they are taken back to the first question without the personalised welcome show again.
 
 - If the player makes all the correct choices and reaches the end of the game they are greeted with a personalised message and a gif of a fireworks display.
 
-- At this stage they are given the chance to start form scratch by reloading the page and the name is not held.
+- At this stage they are given the chance to start from scratch by reloading the page and the name is not held.
 
 The following devices were emulated on Google Chrome developer tools running the site with no issues:
 
@@ -304,3 +304,4 @@ Devices emulated are as follows:
 | Previous States showing when new game starts. | Console logged 'items' in pickedAnswer function to find scope and reset items to {} when player has to go back to the first question.
 | Name check function form welcome screen wasn't working. | Re-wrote function.  suspect syntax error initally.
 | When enter key is pressed on welcome screen the game doesn't move to the next screen | Added event lister for enter to run the function to move the game on to the next stage when enter is ----------
+| When 1 option button is presented on screen from the answer options it does not show centrally | used javascript to remove the class causing this making sure it was reinstated at the start of the game again
