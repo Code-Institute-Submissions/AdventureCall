@@ -239,7 +239,7 @@ and it was found to be a bit more serious.  Fans of the show would have preferre
 famous 'Kill Jester' sketch and as mentioned before more interaction with falconhoof would have improved the experience.  Overall
 because of the many references to the show it is felt that the user story above has been achieved.
 
-## Game Walkthrough
+### Game Walkthrough
 
 - Initial Welcome screen with Falconhoof character in reference to the inspiration sketch, text welcome and space for player to enter name.
 
@@ -258,7 +258,7 @@ because of the many references to the show it is felt that the user story above 
 - At this stage they are given the chance to start from scratch by hitting the go back to the beginning button and reloading the page and the name is not held.
 
 
-## Emulated Device Testing
+### Emulated Device Testing
 
 The following devices were emulated on Google Chrome developer tools running the site and testing all the user stories and walkthrough steps with no issues:
 
@@ -289,7 +289,7 @@ Larger screen widths above 1024px displayed a lot of white space either side of 
 
 link to Troy testing environment [HERE](http://troy.labs.daum.net/?url=https%3A%2F%2Fmarkj0hnst0n.github.io%2FAdventureCall%2F&device=N950;ASCENDMATE2;XPERIAZ;A390;HTCEVO;HTCONE;D821;A1474;PC03;T700;PC00;V500;SD820;PC07)
 
-## Other Live Testing
+### Other Live Testing
 
 It was tested live on iPhone 8 and the user found that they had to zoom in to read on question one.  No amendments made to ensure readability across all other screen sizes.
 
