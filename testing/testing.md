@@ -46,10 +46,28 @@ and it was found to be a bit more serious.  Fans of the show would have preferre
 famous 'Kill Jester' sketch and as mentioned before more interaction with falconhoof would have improved the experience.  Overall
 because of the many references to the show it is felt that the user story above has been achieved.
 
+### Game Walkthrough
+
+- Initial Welcome screen with Falconhoof character in reference to the inspiration sketch, text welcome and space for player to enter name.
+
+- If player enters no name of a blank space they will be prompted to enter a name before continuing.
+
+- Once player enters a valid name next screen is displayed with a personalised welcome for the player using their name.
+
+- The game starts and the first question appears including any image associated with the question.
+
+- The player makes choices based on the answer options given and through the game is given the oppotunity to pick up objects which may help them later in the game.
+
+- If the player makes a choice which results in death then they are taken back to the first question without the welcome this time.
+
+- If the player makes all the correct choices and reaches the end of the game they are greeted with a personalised message and a gif of a fireworks display.
+
+- At this stage they are given the chance to start form scratch by reloading the page and the name is not held.
+
 The following devices were emulated on Google Chrome developer tools running the site with no issues:
 
 
-The Website was tested on the [Troy](http://troy.labs.daum.net/) site using the tests below with no issues.
+The Website was tested on the [Troy](http://troy.labs.daum.net/) site using the tests described above with no issues.
 
 Devices emulated are as follows:
 
