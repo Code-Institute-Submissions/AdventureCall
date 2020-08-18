@@ -49,11 +49,11 @@ The container for the questions was made a slightly darker grey to match the sku
 
 #### The game itself
 
-- Brings up questions and answers for the player based on what items the player is holding.  Players answer questions in the hope fo making it to the end of the game without dying.
+- Brings up questions and answers for the player based on what items the player is holding and shows how long the game has taken so far in real time.  Players answer questions in the hope fo making it to the end of the game without dying.
 
 #### End Screen
 
-- A final screen with a personalised greeting and an animated treat for any users making it to the end.  This screen gives the option to start all over again from the very beginnning.
+- A final screen with a personalised greeting and an animated treat for any users making it to the end including the time it's taken to complete the game.  This screen gives the option to start all over again from the very beginnning.
 
 ## Features left to impliment
 
@@ -200,7 +200,9 @@ The users were familiar with the sketch show that the game is based on except fo
 fantasy aspect of the game.  Users felt that there could have been more references to the show and there was
 a suggestion that there could have been more interaction between the player and the guide character Falconhoof.
 Overall the testers thought that the main objective of the first user story was met as the game was enjoyable to workout
-and the little fireworks gif at the end provided a nice bookend to the experience.
+and the little fireworks gif at the end provided a nice bookend to the experience.  The timer provides some impetus to the player
+and creates some tension as well as giving them a 'score' to aim for after they have completed the game once. This provides
+a more competitive experience as they try to beat their previous best time.
 
 After the intial tests I found that it was a bit more intuitive to hit the enter key to start the initial game after typing in your name so
 this funtionality was added into the game to improve user experience.
@@ -251,16 +253,43 @@ because of the many references to the show it is felt that the user story above 
 
 - At this stage they are given the chance to start from scratch by hitting the go back to the beginning button and reloading the page and the name is not held.
 
-One user testing the game found the Adventure Call logo was slightly blurry due to the quality of the image used.  Continued to use this image as it was the best quality image I could find of the logo and it really makes the best possible link to the source material.
 
-The following devices were emulated on Google Chrome developer tools running the site with no issues:
+## Emulated Device Testing
 
-It was tested live on iPhone 8 and the user found that they had to zoom in to read on question one.  No amendments made to ensure readability across all other screen sizes.
+The following devices were emulated on Google Chrome developer tools running the site and testing all the user stories and walkthrough steps with no issues:
+
+Samsung Galaxy Fold
+Motorola Moto G4
+Microsoft Surface Duo
 
 The Website was tested on the [Troy](http://troy.labs.daum.net/) site using the tests described above with no issues.
 
-Devices emulated are as follows:
+Emulated on Troy with all user stories and walkthrough steps tested with no issues:
 
+Samsung Galaxy s8
+Huawei Ascend Mate2
+Sony Xperia Z
+Google Nexus 5
+HTC One
+LG G5
+Apple iPhone 6, 7 & 8
+Apple iPhone 6s+, 7+ & 8+
+LG G Pad 8.3
+iPad retina
+Samsung Galaxy Tab S
+PC Screen 800px, 1024px, 1440px and 1920px.
+
+Tested Lenovo a390 on Troy and due to small screen pixel width cut off sides of question container border but the questions were all still readable and all user stories still satisfied.
+
+Larger screen widths above 1024px displayed a lot of white space either side of the game information but due to the mobile first nature of the design there were no additions made to change this.  All user stories still achieved.
+
+link to Troy testing environment [HERE](http://troy.labs.daum.net/?url=https%3A%2F%2Fmarkj0hnst0n.github.io%2FAdventureCall%2F&device=N950;ASCENDMATE2;XPERIAZ;A390;HTCEVO;HTCONE;D821;A1474;PC03;T700;PC00;V500;SD820;PC07)
+
+## Other Live Testing
+
+It was tested live on iPhone 8 and the user found that they had to zoom in to read on question one.  No amendments made to ensure readability across all other screen sizes.
+
+Unspecificed PC running Opera Browser reported that the main logo was slightly blurred.  This is a known issue as the image used was not of high resolution.  The logo was kept as it is perfect for the brief of representing the original sketch.
 
 ### Google Lighthouse testing documentation for desktop and mobile for all pages can be found in PDF form [here](!)
 
