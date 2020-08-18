@@ -27,7 +27,7 @@ See separate Testing.md file for information on how these user stories were test
 
 Basic wireframes for this project were created using Balsamiq and you can find a link to the balsamiq project file [here](!)
 
-[Wireframes Pictures Repository](!)
+[Wireframes Pictures Repository](https://github.com/markj0hnst0n/AdventureCall/tree/master/wireframes)
 
 ## Colour Scheme
 
@@ -181,7 +181,7 @@ https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-
 Thanks to the following people for making the project happen:
 
 - My Mentor Antonija Šimić
-- The [Code Institute](https://codeinstitute.net/) Slack Community.
+- The [Code Institute](https://codeinstitute.net/) Slack Community specifically SamFixG, Lucyjpjones and Sean Mc for testing the site.
 - The [Code Institute](https://codeinstitute.net/) tutors and instructional material.  Tutor Stephen for his pep talk. Tutor Miklos for his perserverance.  Tutor Xavier for his excellent resources.
 - My Wife Joanna Johnston for her (constructive) criticism and understanding when I lock myself away in the attic for hours on end
 
@@ -255,6 +255,7 @@ One user testing the game found the Adventure Call logo was slightly blurry due 
 
 The following devices were emulated on Google Chrome developer tools running the site with no issues:
 
+It was tested live on iPhone 8 and the user found that they had to zoom in to read on question one.  No amendments made to ensure readability across all other screen sizes.
 
 The Website was tested on the [Troy](http://troy.labs.daum.net/) site using the tests described above with no issues.
 
