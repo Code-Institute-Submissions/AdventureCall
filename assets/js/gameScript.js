@@ -10,8 +10,6 @@ $(document).ready(function () {
     let items = {};
     let questionNode = 0;
 
-    
-
     // This function takes account of the player's name.
     // It also checks to see if a name has actually been entered.
     // It runs the Welcome Screen if a name is entered.
@@ -29,21 +27,21 @@ $(document).ready(function () {
         }
     });
 
-    // Function to recognise if enter key is hit to 
+    // Function to recognise if enter key is hit to
 
-    $(document).keypress(function(event) {
-    if (event.key === "Enter") {
-        playerName = $("#player-name").val();
-        if (!playerName || playerName.charAt(0) == " ") {
-            $("#welcome-screen").removeClass("show");
-            $("#welcome-screen").addClass("hide");
-            $("#no-name-screen").removeClass("hide");
-            $("#no-name-screen").addClass("show");
-        } else {
-            runWelcomeScreen();
+    $(document).keypress(function (event) {
+        if (event.key === "Enter") {
+            playerName = $("#player-name").val();
+            if (!playerName || playerName.charAt(0) == " ") {
+                $("#welcome-screen").removeClass("show");
+                $("#welcome-screen").addClass("hide");
+                $("#no-name-screen").removeClass("hide");
+                $("#no-name-screen").addClass("show");
+            } else {
+                runWelcomeScreen();
+            }
         }
-    }
-});
+    });
 
     // This function sends the player back to the welcome screen from the no name screen.
 
@@ -73,10 +71,10 @@ $(document).ready(function () {
         $("#end-message").text(endMessage);
     }
 
-
     //  This function starts the game and shows the first question.
 
     function playGame() {
+        $("#answer-options").addClass("buttons");
         showQuestion(1);
         timer.start();
     }
@@ -86,6 +84,11 @@ $(document).ready(function () {
     function showQuestion(questionNodeIndex) {
         questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
         imageElement.innerHTML = questionNode.image;
+        if (questionNode.image == '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />') {
+            $("#answer-options").removeClass("buttons");
+        } else if (questionNode.image == '<img src="assets/images/wizard.png" alt="A cartoon wizard" width="265" height="200" />') {
+            $("#answer-options").removeClass("buttons");
+        }
         questionElement.innerText = questionNode.question;
         while (answerButtonsElement.firstChild) {
             answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -133,7 +136,7 @@ $(document).ready(function () {
             timer.stop();
             return;
         } else if (questionNodeIndex < 1) {
-            timer.reset ();
+            timer.reset();
             items = {};
             return playGame();
         }
@@ -150,66 +153,66 @@ $(document).ready(function () {
 // Timer js below from https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript
 
 class Timer {
-  constructor () {
-    this.isRunning = false;
-    this.startTime = 0;
-    this.overallTime = 0;
-  }
-
-  _getTimeElapsedSinceLastStart () {
-    if (!this.startTime) {
-      return 0;
-    }
-  
-    return Date.now() - this.startTime;
-  }
-
-  start () {
-    if (this.isRunning) {
-      return console.error('Timer is already running');
+    constructor() {
+        this.isRunning = false;
+        this.startTime = 0;
+        this.overallTime = 0;
     }
 
-    this.isRunning = true;
+    _getTimeElapsedSinceLastStart() {
+        if (!this.startTime) {
+            return 0;
+        }
 
-    this.startTime = Date.now();
-  }
-
-  stop () {
-    if (!this.isRunning) {
-      return console.error('Timer is already stopped');
+        return Date.now() - this.startTime;
     }
 
-    this.isRunning = false;
+    start() {
+        if (this.isRunning) {
+            return console.error("Timer is already running");
+        }
 
-    this.overallTime = this.overallTime + this._getTimeElapsedSinceLastStart();
-  }
+        this.isRunning = true;
 
-  reset () {
-    this.overallTime = 0;
-
-    if (this.isRunning) {
-      this.startTime = Date.now();
-      return;
+        this.startTime = Date.now();
     }
 
-    this.startTime = 0;
-  }
+    stop() {
+        if (!this.isRunning) {
+            return console.error("Timer is already stopped");
+        }
 
-  getTime () {
-    if (!this.startTime) {
-      return 0;
+        this.isRunning = false;
+
+        this.overallTime = this.overallTime + this._getTimeElapsedSinceLastStart();
     }
 
-    if (this.isRunning) {
-      return this.overallTime + this._getTimeElapsedSinceLastStart();
+    reset() {
+        this.overallTime = 0;
+
+        if (this.isRunning) {
+            this.startTime = Date.now();
+            return;
+        }
+
+        this.startTime = 0;
     }
 
-    return this.overallTime;
-  }
+    getTime() {
+        if (!this.startTime) {
+            return 0;
+        }
+
+        if (this.isRunning) {
+            return this.overallTime + this._getTimeElapsedSinceLastStart();
+        }
+
+        return this.overallTime;
+    }
 }
 
 const timer = new Timer();
 setInterval(() => {
-  const timeInSeconds = Math.round(timer.getTime() / 1000);
-  document.getElementById('time').innerText = timeInSeconds;
-}, 100)
+    const timeInSeconds = Math.round(timer.getTime() / 1000);
+    document.getElementById("time").innerText = timeInSeconds;
+}, 100);
