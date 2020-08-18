@@ -251,6 +251,8 @@ because of the many references to the show it is felt that the user story above 
 
 - At this stage they are given the chance to start from scratch by hitting the go back to the beginning button and reloading the page and the name is not held.
 
+One user testing the game found the Adventure Call logo was slightly blurry due to the quality of the image used.  Continued to use this image as it was the best quality image I could find of the logo and it really makes the best possible link to the source material.
+
 The following devices were emulated on Google Chrome developer tools running the site with no issues:
 
 
