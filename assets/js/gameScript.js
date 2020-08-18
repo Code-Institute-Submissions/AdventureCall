@@ -5,10 +5,12 @@ $(document).ready(function () {
     const imageElement = document.getElementById("question-image");
     const questionElement = document.getElementById("question");
     const answerButtonsElement = document.getElementById("answer-options");
-
+    const timerElement = document.getElementById("time");
+    
     let playerName = "";
     let items = {};
     let questionNode = 0;
+    let endTime = 0;
 
     // This function takes account of the player's name.
     // It also checks to see if a name has actually been entered.
@@ -59,7 +61,6 @@ $(document).ready(function () {
     function runWelcomeScreen() {
         playGame();
         const welcomeGreeting = `Welcome, ${playerName}`;
-        const endMessage = `You have done well in your quest, ${playerName}`;
         $("#welcome").removeClass("hide");
         $("#welcome").addClass("show");
         $("#welcome").text(welcomeGreeting);
@@ -68,7 +69,6 @@ $(document).ready(function () {
         $("#welcome-screen").addClass("hide");
         $("#game-screen").removeClass("hide");
         $("#game-screen").addClass("show");
-        $("#end-message").text(endMessage);
     }
 
     //  This function starts the game and shows the first question.
@@ -86,6 +86,7 @@ $(document).ready(function () {
         imageElement.innerHTML = questionNode.image;
         if (questionNode.image == '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />') {
             $("#answer-options").removeClass("buttons");
+            timer.stop();
         } else if (questionNode.image == '<img src="assets/images/wizard.png" alt="A cartoon wizard" width="265" height="200" />') {
             $("#answer-options").removeClass("buttons");
         }
@@ -130,10 +131,13 @@ $(document).ready(function () {
         const questionNodeIndex = answer.nextAnswer;
         items = Object.assign(items, answer.addItem);
         if (questionNodeIndex > questionNodes.length) {
-            $("#game-screen").addClass("hide");
-            $("#end-screen").removeClass("hide");
-            $("#end-screen").addClass("show");
             timer.stop();
+            endTime = timeInSeconds;
+            $("#game-screen").addClass("hide");
+            const endMessage = `You have done well in your quest, ${playerName}.  You have completed the game in ${endTime} seconds!`;
+            $("#end-message").text(endMessage);
+            $("#end-screen").removeClass("hide");
+            $("#end-screen").addClass("show");            
             return;
         } else if (questionNodeIndex < 1) {
             timer.reset();
@@ -148,9 +152,8 @@ $(document).ready(function () {
     $("#reload").click(function () {
         location.reload();
     });
-});
 
-// Timer js below from https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript
+    // Timer js below from https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript user Tomasz Bubała
 
 class Timer {
     constructor() {
@@ -185,6 +188,7 @@ class Timer {
         this.isRunning = false;
 
         this.overallTime = this.overallTime + this._getTimeElapsedSinceLastStart();
+        return
     }
 
     reset() {
@@ -213,6 +217,8 @@ class Timer {
 
 const timer = new Timer();
 setInterval(() => {
-    const timeInSeconds = Math.round(timer.getTime() / 1000);
-    document.getElementById("time").innerText = timeInSeconds;
+    timeInSeconds = Math.round(timer.getTime() / 1000);
+    timerElement.innerText = timeInSeconds;
 }, 100);
+
+});
