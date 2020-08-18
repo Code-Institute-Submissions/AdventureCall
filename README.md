@@ -55,6 +55,10 @@ The container for the questions was made a slightly darker grey to match the sku
 
 - A final screen with a personalised greeting and an animated treat for any users making it to the end including the time it's taken to complete the game.  This screen gives the option to start all over again from the very beginnning.
 
+#### Timer
+
+- A timer which counts up how long the player has been playing for and displayed the time taken if the player completes the game.
+
 ## Features left to impliment
 
 # Technologies Used
