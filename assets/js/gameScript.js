@@ -10,6 +10,7 @@ $(document).ready(function () {
     let playerName = "";
     let items = {};
     let questionNode = 0;
+    let timeInSeconds = 0;
     let endTime = 0;
 
     // This function takes account of the player's name.
@@ -29,7 +30,7 @@ $(document).ready(function () {
         }
     });
 
-    // Function to recognise if enter key is hit to
+    // Function to recognise if enter key is hit to move game onto questions.
 
     $(document).keypress(function (event) {
         if (event.key === "Enter") {
@@ -71,7 +72,7 @@ $(document).ready(function () {
         $("#game-screen").addClass("show");
     }
 
-    //  This function starts the game and shows the first question.
+    //  This function starts the game, starts the timer and shows the first question.
 
     function playGame() {
         $("#answer-options").addClass("buttons");
@@ -104,7 +105,7 @@ $(document).ready(function () {
     }
 
     // This function displays the answer options available to the character based on the items being carried.
-    // It also hide the initial welcome screen.
+    // It also hides the initial welcome screen.
 
     function showAnswerOptions() {
         questionNode.answers.forEach((answer) => {
@@ -124,8 +125,9 @@ $(document).ready(function () {
 
     //  This function moves the character on to the next question based on which answer parameter is passed in by the player.
     //  It also assigns any items picked up to the character.
-    //  If the player reaches the end of the game this function moves them on to the End Game Screen.
-    //  If the player dies it resets the items the player carries to zero and puts them back to the first question.
+    //  If the player reaches the end of the game this function moves them on to the End Game Screen and stops the timer.
+    //  If the player dies it stops the timer based on recognising the death image.
+    //  If the player restarts the game it resets the items the player carries to zero, resets the timer and puts them back to the first question.
 
     function pickedAnswer(answer) {
         const questionNodeIndex = answer.nextAnswer;
@@ -153,7 +155,7 @@ $(document).ready(function () {
         location.reload();
     });
 
-    // Timer js below from https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript user Tomasz Bubała
+    // Timer js below from https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript user Tomasz Bubała to create and accurate timer for the game using setinterval.
 
 class Timer {
     constructor() {
