@@ -74,11 +74,6 @@ The following devices were emulated on Google Chrome developer tools running the
 Samsung Galaxy Fold
 Motorola Moto G4
 Microsoft Surface Duo
-Google Pixel 2
-Google Pixel 2 XL
-Apple iPhone X
-Apple iPad
-Apple iPad Pro
 
 The Website was tested on the [Troy](http://troy.labs.daum.net/) site using the tests described above with no issues.
 
@@ -93,7 +88,7 @@ LG G5
 Apple iPhone 6, 7 & 8
 Apple iPhone 6s+, 7+ & 8+
 LG G Pad 8.3
-Apple iPad retina
+iPad retina
 Samsung Galaxy Tab S
 PC Screen 800px, 1024px, 1440px and 1920px.
 

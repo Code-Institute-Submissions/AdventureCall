@@ -6,7 +6,7 @@ $(document).ready(function () {
     const questionElement = document.getElementById("question");
     const answerButtonsElement = document.getElementById("answer-options");
     const timerElement = document.getElementById("time");
-    
+
     let playerName = "";
     let items = {};
     let questionNode = 0;
@@ -139,7 +139,7 @@ $(document).ready(function () {
             const endMessage = `You have done well in your quest, ${playerName}.  You have completed the game in ${endTime} seconds!`;
             $("#end-message").text(endMessage);
             $("#end-screen").removeClass("hide");
-            $("#end-screen").addClass("show");            
+            $("#end-screen").addClass("show");
             return;
         } else if (questionNodeIndex < 1) {
             timer.reset();
@@ -157,70 +157,69 @@ $(document).ready(function () {
 
     // Timer js below from https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript user Tomasz Bubała to create and accurate timer for the game using setinterval.
 
-class Timer {
-    constructor() {
-        this.isRunning = false;
-        this.startTime = 0;
-        this.overallTime = 0;
-    }
-
-    _getTimeElapsedSinceLastStart() {
-        if (!this.startTime) {
-            return 0;
+    class Timer {
+        constructor() {
+            this.isRunning = false;
+            this.startTime = 0;
+            this.overallTime = 0;
         }
 
-        return Date.now() - this.startTime;
-    }
+        _getTimeElapsedSinceLastStart() {
+            if (!this.startTime) {
+                return 0;
+            }
 
-    start() {
-        if (this.isRunning) {
-            return console.error("Timer is already running");
+            return Date.now() - this.startTime;
         }
 
-        this.isRunning = true;
+        start() {
+            if (this.isRunning) {
+                return console.error("Timer is already running");
+            }
 
-        this.startTime = Date.now();
-    }
+            this.isRunning = true;
 
-    stop() {
-        if (!this.isRunning) {
-            return console.error("Timer is already stopped");
-        }
-
-        this.isRunning = false;
-
-        this.overallTime = this.overallTime + this._getTimeElapsedSinceLastStart();
-        return
-    }
-
-    reset() {
-        this.overallTime = 0;
-
-        if (this.isRunning) {
             this.startTime = Date.now();
+        }
+
+        stop() {
+            if (!this.isRunning) {
+                return console.error("Timer is already stopped");
+            }
+
+            this.isRunning = false;
+
+            this.overallTime = this.overallTime + this._getTimeElapsedSinceLastStart();
             return;
         }
 
-        this.startTime = 0;
-    }
+        reset() {
+            this.overallTime = 0;
 
-    getTime() {
-        if (!this.startTime) {
-            return 0;
+            if (this.isRunning) {
+                this.startTime = Date.now();
+                return;
+            }
+
+            this.startTime = 0;
         }
 
-        if (this.isRunning) {
-            return this.overallTime + this._getTimeElapsedSinceLastStart();
+        getTime() {
+            if (!this.startTime) {
+                return 0;
+            }
+
+            if (this.isRunning) {
+                return this.overallTime + this._getTimeElapsedSinceLastStart();
+            }
+
+            return this.overallTime;
         }
-
-        return this.overallTime;
     }
-}
 
-const timer = new Timer();
-setInterval(() => {
-    timeInSeconds = Math.round(timer.getTime() / 1000);
-    timerElement.innerText = timeInSeconds;
-}, 100);
-
+    const timer = new Timer();
+    setInterval(() => {
+        timeInSeconds = Math.round(timer.getTime() / 1000);
+        timerElement.innerText = timeInSeconds;
+    }, 100);
 });

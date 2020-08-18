@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans&display=swap");
 
 body {
     margin: 0;
@@ -6,15 +6,14 @@ body {
     background-color: #f8f8f8;
 }
 
-.center-logo{
+.center-logo {
     margin: auto;
     text-align: center;
     width: 288px;
     position: relative;
 }
 
-
-.question-container{
+.question-container {
     position: absolute;
     width: 288px;
     border: 1px solid black;
@@ -37,20 +36,19 @@ body {
 .hide {
     visibility: hidden;
     position: absolute;
-    
 }
 
-.welcome-style{
-    font-family: 'MedievalSharp';
+.welcome-style {
+    font-family: "MedievalSharp";
     margin: 10px;
 }
 
-.question-style{
-    font-family: 'Open Sans';
+.question-style {
+    font-family: "Open Sans";
     margin: 10px;
 }
 
-.buttons{
+.buttons {
     box-sizing: border-box;
     padding: 10px;
     display: grid;
@@ -66,7 +64,7 @@ body {
 }
 
 .button-style {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-size: 50;
     background-color: rgb(134, 92, 19);
     color: #f8f8f8;
