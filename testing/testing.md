@@ -1,8 +1,6 @@
 # Testing
 
-### On all Listed Devices the following tests were performed:
-
-Initial testing was completed on a Macbook Pro running Chrome Browser and Samsung S10 phone.
+All testing delcared in this section has been done manually.  Initial testing was completed on a Macbook Pro running Chrome Browser and Samsung S10 phone.
 
 ### User Stories tests
 
@@ -29,7 +27,7 @@ Below are some gameplay screenshots including the final fireworks sequence.
 The option of entering the player's name has been used to personalise the user experience so that the game can speak directly to the 
 user.  This can be seen in the fireworks screenshot above and also the intial welcome screens of the game below.
 
-![Welcome_Screen](readme/falconhoof-welcomeSS.png) ![First_Question_Screen](readme/moonlit-meadowSS.png)
+![Welcome_Screen](../readme/falconhoof-welcomeSS.png) ![First_Question_Screen](../readme/moonlit-meadowSS.png)
 
 - As a fan of fantasy/role playing games I want references to the tropes associated with these games.
 
@@ -38,7 +36,7 @@ include Trolls, wizards, golden amulets and castle towers!  This helps to create
 imagination to immerse themselves in the game.  The pictures used further support this and they were chosen for their fun cartoonish
 quality and as good representations of what the text is trying to convey.  This is demonstrated in the moonlit meadow picture above and the death screen shown below.
 
-![Death_Screen](readme/deathSS.png)  ![Troll_Screen](readme/trollSS.png)  
+![Death_Screen](../readme/deathSS.png)  ![Troll_Screen](../readme/trollSS.png)  
 
 - As a fan of the original limmy sketch I want to have references to the show so that it will make the game more fun.
 
@@ -150,3 +148,4 @@ Unspecificed PC running Opera Browser reported that the main logo was slightly b
 | Name check function form welcome screen wasn't working. | Re-wrote function.  suspect syntax error initally.
 | When enter key is pressed on welcome screen the game doesn't move to the next screen | Added event lister for enter to run the function to move the game on to the next stage when enter is ----------
 | When 1 option button is presented on screen from the answer options it does not show centrally | used javascript to remove the class causing this making sure it was reinstated at the start of the game again
+| When player offered to help roofer they are supposed to die but this takes them to the end screen | had to add + 1 to questionNodes array length as the picked answer function was was triggering the end screen.
