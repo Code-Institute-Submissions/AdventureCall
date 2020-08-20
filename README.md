@@ -142,7 +142,15 @@ Written content by Mark Johnston
 
 ## Media
 
-https://www.animatedimages.org/data/media/492/animated-fireworks-image-0014.gif
+Image for page logo found at https://www.redbubble.com/shop/limmy+stickers 
+
+Image of Falconhoof for Welcome Screen found at offical bbc youtube channel https://www.youtube.com/watch?v=gaXUT_CMHmg 
+
+Moonlit Meadow image found at https://www.youtube.com/watch?v=Bq7QcB97zWY
+
+Cartoon wizard image found at https://adventuretime.fandom.com/wiki/Wizard_Thief
+
+Ending Fireworks gif found at https://www.animatedimages.org/data/media/492/animated-fireworks-image-0014.gif
 
 ## Influences
 
