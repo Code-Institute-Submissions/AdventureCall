@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans&display=swap");
-
 /*-- Setting Background colour  */
 
 body {
@@ -60,7 +58,7 @@ body {
     position: absolute;
 }
 
-/*-- Styling of answer buttons including hover effect from https://ianlunn.github.io/Hover/ */
+/*-- Styling of answer buttons */
 
 .buttons {
     box-sizing: border-box;
@@ -73,7 +71,7 @@ body {
 
 .button-style {
     font-family: "Open Sans";
-    font-size: 50;
+    font-size: 15px;
     background-color: rgb(134, 92, 19);
     color: #f8f8f8;
     border-radius: 5px;

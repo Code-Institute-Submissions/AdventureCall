@@ -20,7 +20,8 @@ $(document).ready(function () {
 
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
-        if (!playerName || playerName.charAt(0) == " ") {
+        const emptyName = !playerName || playerName.charAt(0) == " ";
+        if (emptyName) {
             $("#welcome-screen").removeClass("show");
             $("#welcome-screen").addClass("hide");
             $("#no-name-screen").removeClass("hide");
@@ -85,10 +86,11 @@ $(document).ready(function () {
     function showQuestion(questionNodeIndex) {
         questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
         imageElement.innerHTML = questionNode.image;
-        if (questionNode.image == '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />') {
+        const deathScreen = '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />';
+        if (questionNode.image == deathScreen) {
             $("#answer-options").removeClass("buttons");
             timer.stop();
-        } else if (questionNode.image == '<img src="assets/images/wizard.png" alt="A cartoon wizard" width="265" height="200" />') {
+        } else if (questionNode.image == deathScreen) {
             $("#answer-options").removeClass("buttons");
         }
         questionElement.innerText = questionNode.question;
@@ -146,8 +148,6 @@ $(document).ready(function () {
             items = {};
             return playGame();
         }
-        console.log(questionNodes.length)
-        console.log(questionNodeIndex)
         showQuestion(questionNodeIndex);
     }
 
@@ -167,7 +167,7 @@ $(document).ready(function () {
             this.overallTime = 0;
         }
 
-        _getTimeElapsedSinceLastStart() {
+        getTimeElapsedSinceLastStart() {
             if (!this.startTime) {
                 return 0;
             }
@@ -192,7 +192,7 @@ $(document).ready(function () {
 
             this.isRunning = false;
 
-            this.overallTime = this.overallTime + this._getTimeElapsedSinceLastStart();
+            this.overallTime = this.overallTime + this.getTimeElapsedSinceLastStart();
             return;
         }
 
@@ -213,7 +213,7 @@ $(document).ready(function () {
             }
 
             if (this.isRunning) {
-                return this.overallTime + this._getTimeElapsedSinceLastStart();
+                return this.overallTime + this.getTimeElapsedSinceLastStart();
             }
 
             return this.overallTime;

@@ -99,7 +99,7 @@ for creating Wireframes for initial visual development
 
 [Google Fonts](https://fonts.google.com/) for fonts used in the project.
 
-[Google Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools) for testing code on various device sizes during development.
+[Google Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools) for testing code on various device sizes during development and debugging.
 
 [Web Formatter](https://webformatter.com/) to format HTML and CSS code.
 
