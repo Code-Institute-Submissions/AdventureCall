@@ -201,9 +201,7 @@ Thanks to the following people for making the project happen:
 
 # Testing
 
-### On all Listed Devices the following tests were performed:
-
-Initial testing was completed on a Macbook Pro running Chrome Browser and Samsung S10 phone.
+All testing delcared in this section is manuak testing.  Initial testing was completed on a Macbook Pro running Chrome Browser and Samsung S10 phone.
 
 ### User Stories tests
 
