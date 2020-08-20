@@ -154,41 +154,23 @@ Ending Fireworks gif found at https://www.animatedimages.org/data/media/492/anim
 
 ## Influences
 
-The inspiration behind the code of the game is from this youtube video
+[The inspiration behind the code of the game is from this youtube video](https://www.youtube.com/watch?v=R1S_NhKkvGA)
 
-https://www.youtube.com/watch?v=R1S_NhKkvGA
+[Debugging vid which helped me massively](https://www.youtube.com/watch?v=AX7uybwukkk)
 
-Debugging vid.
+[Using Nodes in the DOM](https://www.w3schools.com/js/js_htmldom_nodes.asp#:~:text=To%20add%20a%20new%20element,it%20to%20an%20existing%20element.)
 
-https://www.youtube.com/watch?v=AX7uybwukkk
+[Value from textbox input](https://www.tutorialrepublic.com/faq/how-to-get-the-value-in-an-input-text-box-using-jquery.php)
 
-Node in the DOM
+[How to center an absolute element](https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element)
 
-https://www.w3schools.com/js/js_htmldom_nodes.asp#:~:text=To%20add%20a%20new%20element,it%20to%20an%20existing%20element.
+[Hover Effect](https://ianlunn.github.io/Hover/)
 
-Value from textbox input
+[let, var, const usage](https://www.youtube.com/watch?v=sjyJBL5fkp8&amp;t=10s)
 
-https://www.tutorialrepublic.com/faq/how-to-get-the-value-in-an-input-text-box-using-jquery.php
+[Adding Event listener for enter key in jQuery](https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery)
 
-How to center an absolute element
-
-https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element
-
-Hover Effect
-
-https://ianlunn.github.io/Hover/
-
-let, var, const usage
-
-https://www.youtube.com/watch?v=sjyJBL5fkp8&amp;t=10s
-
-Adding Event listener for enter key in jQuery
-
-https://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery
-
-Timer js
-
-https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript
+[Timer js by Tomasz Bubała found here](https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript)
 
 ## Acknowledgements
 
