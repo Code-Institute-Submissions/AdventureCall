@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Open+Sans&display=swap");
 
+/*-- Setting Background colour  */
+
 body {
-    margin: 0;
-    padding: 0;
     background-color: #f8f8f8;
 }
+
+/*-- Style for header logo  */
 
 .center-logo {
     margin: auto;
@@ -12,6 +14,8 @@ body {
     width: 288px;
     position: relative;
 }
+
+/*-- Styles for the questions of the quesiton area of the main game including welcome screen */
 
 .question-container {
     position: absolute;
@@ -29,6 +33,24 @@ body {
     background-color: #f0f0f0;
 }
 
+.question-style {
+    font-family: "Open Sans";
+    margin: 10px;
+}
+
+.input-style {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.welcome-style {
+    font-family: "MedievalSharp";
+    margin: 10px;
+}
+
+/*-- Styles used to show/hide welcome/ed/question screens */
+
 .show {
     visibility: visible;
 }
@@ -38,15 +60,7 @@ body {
     position: absolute;
 }
 
-.welcome-style {
-    font-family: "MedievalSharp";
-    margin: 10px;
-}
-
-.question-style {
-    font-family: "Open Sans";
-    margin: 10px;
-}
+/*-- Styling of answer buttons including hover effect from https://ianlunn.github.io/Hover/ */
 
 .buttons {
     box-sizing: border-box;
@@ -55,12 +69,6 @@ body {
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: auto;
-}
-
-.input-style {
-    border-radius: 5px;
-    padding: 5px;
-    margin: 10px;
 }
 
 .button-style {
