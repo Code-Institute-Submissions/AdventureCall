@@ -25,7 +25,7 @@ See separate Testing.md file for information on how these user stories were test
 
 ## Wireframes
 
-Basic wireframes for this project were created using Balsamiq and you can find a link to the balsamiq project file [here](!)
+Basic wireframes for this project were created using Balsamiq and you can find a link to the balsamiq project file [here](wireframes/adventure-call-wireframes.bmpr)
 
 [Wireframes Pictures Repository](https://github.com/markj0hnst0n/AdventureCall/tree/master/wireframes)
 
