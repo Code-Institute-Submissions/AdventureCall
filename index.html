@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+    <!-- METATAGS -->
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +11,17 @@
         <title>Adventure Call</title>
     </head>
     <body>
+
+    <!-- Page heading including logo from show.  Image found at https://www.redbubble.com/shop/limmy+stickers -->
+    
         <div class="heading">
             <div class="center-logo">
                 <img src="assets/images/ac-logo.png" alt="Adventure Call Logo" />
             </div>
         </div>
+
+        <!-- Welcome screen for game including name input box.  Iamge found at offical bbc youtube channel https://www.youtube.com/watch?v=gaXUT_CMHmg -->
+
         <div id="welcome-screen" class="question-container show">
             <div class="question-style">
                 <img src="assets/images/falconhoof.jpg" alt="Falconhoof.  A man dressed in typical medival fantasy clothing." width="265" height="200" />
@@ -26,12 +35,19 @@
                 </div>
             </div>
         </div>
+
+        <!-- This screen shows if the player does not enter a valid name -->
+
         <div id="no-name-screen" class="question-container hide">
             <div class="question-style">
                 <h2>Please Enter a Name!</h2>
                 <button id="go-back" class="button-style">OK</button>
             </div>
         </div>
+
+        <!-- Main Game Screen with questions populated by gameScript.js and question information taken from questions.js.  
+        Timer used is from stack overflow page https://stackoverflow.com/questions/29971898/how-to-create-an-accurate-timer-in-javascript user Tomasz Bubała -->
+
         <div id="game-screen" class="question-container hide">
             <div id="welcome" class="welcome-style hide">Welcome!</div>
             <div id="question-image"></div>
@@ -44,6 +60,9 @@
                 <button class="button-style">Answer 4</button>
             </div>
         </div>
+
+        <!-- End Screen which displays fireworks display gif from google images -->
+
         <div id="end-screen" class="question-container hide">
             <div class="question-style">
                 <img src="assets/images/fireworks.gif" alt="Animated 8-bit graphcs style fireworks" width="265" height="200" />
@@ -51,6 +70,9 @@
                 <button id="reload" class="button-style">Go back to the beginning?</button>
             </div>
         </div>
+
+        <!-- Javascript tags for jQuery and custom js files written by Mark Johnston -->
+
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <script src="assets/js/questions.js"></script>
         <script src="assets/js/gameScript.js"></script>
