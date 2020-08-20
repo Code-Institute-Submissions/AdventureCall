@@ -88,12 +88,11 @@ $(document).ready(function () {
     function showQuestion(questionNodeIndex) {
         questionNode = questionNodes.find((questionNode) => questionNode.id === questionNodeIndex);
         imageElement.innerHTML = questionNode.image;
-        const deathScreen = '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />';
-        if (questionNode.image == deathScreen) {
+        const deathScreen = questionNode.image == '<img src="assets/images/skull.png" alt="A skull" width="265" height="200" />';
+        const endScreen = questionNode.image == '<img src="assets/images/wizard.png" alt="A cartoon wizard" width="265" height="200" />';
+        if (deathScreen || endScreen) {
             $("#answer-options").removeClass("buttons");
             timer.stop();
-        } else if (questionNode.image == deathScreen) {
-            $("#answer-options").removeClass("buttons");
         }
         questionElement.innerText = questionNode.question;
         while (answerButtonsElement.firstChild) {
@@ -137,7 +136,6 @@ $(document).ready(function () {
         const questionNodeIndex = answer.nextAnswer;
         items = Object.assign(items, answer.addItem);
         if (questionNodeIndex > questionNodes.length + 1) {
-            timer.stop();
             endTime = timeInSeconds;
             $("#game-screen").addClass("hide");
             const endMessage = `You have done well in your quest, ${playerName}.  You have completed the game in ${endTime} seconds!`;
