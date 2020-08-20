@@ -8,6 +8,7 @@ $(document).ready(function () {
     const timerElement = document.getElementById("time");
 
     let playerName = "";
+    let emptyName;
     let items = {};
     let questionNode = 0;
     let timeInSeconds = 0;
@@ -20,15 +21,15 @@ $(document).ready(function () {
 
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
-        const emptyName = !playerName || playerName.charAt(0) == " ";
+        emptyName = !playerName || playerName.charAt(0) == " ";
         if (emptyName) {
             $("#welcome-screen").removeClass("show");
             $("#welcome-screen").addClass("hide");
             $("#no-name-screen").removeClass("hide");
             $("#no-name-screen").addClass("show");
-        } else {
-            runWelcomeScreen();
+            return;
         }
+        runWelcomeScreen();
     });
 
     // Function to recognise if enter key is hit to move game onto questions.
@@ -36,14 +37,15 @@ $(document).ready(function () {
     $(document).keypress(function (event) {
         if (event.key === "Enter") {
             playerName = $("#player-name").val();
-            if (!playerName || playerName.charAt(0) == " ") {
+            emptyName = !playerName || playerName.charAt(0) == " ";
+            if (emptyName) {
                 $("#welcome-screen").removeClass("show");
                 $("#welcome-screen").addClass("hide");
                 $("#no-name-screen").removeClass("hide");
                 $("#no-name-screen").addClass("show");
-            } else {
-                runWelcomeScreen();
+                return;
             }
+            runWelcomeScreen();
         }
     });
 
