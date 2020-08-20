@@ -22,7 +22,7 @@ this funtionality was added into the game to improve user experience.
 
 Below are some gameplay screenshots including the final fireworks sequence.
 
-![Wizard_Screen](./readme/wizardSS.png)    ![Fireworks_Screen](./readme/fireworksSS.png)
+![Wizard_Screen](../readme/wizardSS.png)    ![Fireworks_Screen](../readme/fireworksSS.png)
 
 - As a user/player of the game I want some kind of personalisation of my experience so that I can feel more connected to what is going on.
 
