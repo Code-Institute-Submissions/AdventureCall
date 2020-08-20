@@ -132,7 +132,7 @@ $(document).ready(function () {
     function pickedAnswer(answer) {
         const questionNodeIndex = answer.nextAnswer;
         items = Object.assign(items, answer.addItem);
-        if (questionNodeIndex > questionNodes.length) {
+        if (questionNodeIndex > questionNodes.length + 1) {
             timer.stop();
             endTime = timeInSeconds;
             $("#game-screen").addClass("hide");
@@ -146,6 +146,8 @@ $(document).ready(function () {
             items = {};
             return playGame();
         }
+        console.log(questionNodes.length)
+        console.log(questionNodeIndex)
         showQuestion(questionNodeIndex);
     }
 

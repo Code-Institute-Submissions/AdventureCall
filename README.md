@@ -97,6 +97,8 @@ for creating Wireframes for initial visual development
 
 [GitHub](https://github.com/) for storing code.
 
+[Google Fonts](https://fonts.google.com/) for fonts used in the project.
+
 [Google Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools) for testing code on various device sizes during development.
 
 [Web Formatter](https://webformatter.com/) to format HTML and CSS code.
@@ -341,3 +343,4 @@ Unspecificed PC running Opera Browser reported that the main logo was slightly b
 | Name check function form welcome screen wasn't working. | Re-wrote function.  suspect syntax error initally.
 | When enter key is pressed on welcome screen the game doesn't move to the next screen | Added event lister for enter to run the function to move the game on to the next stage when enter is ----------
 | When 1 option button is presented on screen from the answer options it does not show centrally | used javascript to remove the class causing this making sure it was reinstated at the start of the game again
+| When player offered to help roofer they are supposed to die but this takes them to the end screen | had to add + 1 to questionNodes array length as the picked answer function was was triggering the end screen.
