@@ -116,7 +116,7 @@ Unspecificed PC running Opera Browser reported that the main logo was slightly b
 
 ![CSS Validator info](../readme/cssSS.png)
 
-- JSHint validator Screenshots
+- JSHint validator Screenshot
 
 ![Javascript Validator info](../readme/JShintSS.png)
 
