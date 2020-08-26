@@ -104,20 +104,21 @@ It was tested live on iPhone 8 and the user found that they had to zoom in to re
 
 Unspecificed PC running Opera Browser reported that the main logo was slightly blurred.  This is a known issue as the image used was not of high resolution.  The logo was kept as it is perfect for the brief of representing the original sketch.
 
-### Google Lighthouse testing documentation for desktop can be found [here](!) and mobile information [here](!) in pdf format.
-
-
+### Google Lighthouse Automated testing documentation for desktop can be found [here](../readme/lighthouseDesktopInfo.pdf) and mobile information [here](../readme/lighthouseMobileInfo.pdf) in pdf format.
 
 ### W3C HTML, JSHint and CSS validators – to test for any Errors in the code
 
-### Screenshots of final w3c passes
-
 - index.html HTML Validator Screenshot
 
+![index.html Validator info](../readme/htmlSS.png)
 
 - CSS Validator Screenshot
 
+![CSS Validator info](../readme/cssSS.png)
+
 - JSHint validator Screenshots
+
+![Javascript Validator info](../readme/JShintSS.png)
 
 ### Debugging information
 
