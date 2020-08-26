@@ -56,6 +56,8 @@ because of the many references to the show it is felt that the user story above 
 
 - The game starts and the first question appears including any image associated with the question.  The buttons appear correctly.
 
+- All game question answers were tested to make sure they gave the correct logical result.
+
 - The player makes choices based on the answer options given and through the game is given the oppotunity to pick up objects which may help them later in the game.  On the screen where character is at the gate of bones when the character does not have the correct items the single button item is still off centre.  Could have written bespoke code to amend this but left is as is even though it jars slightly.  The correct options appear based on which item the player currently holds.
 
 - If the player makes a choice which results in death then they are taken back to the first question without the personalised welcome show again.
@@ -102,33 +104,20 @@ It was tested live on iPhone 8 and the user found that they had to zoom in to re
 
 Unspecificed PC running Opera Browser reported that the main logo was slightly blurred.  This is a known issue as the image used was not of high resolution.  The logo was kept as it is perfect for the brief of representing the original sketch.
 
-### Google Lighthouse testing documentation for desktop and mobile for all pages can be found in PDF form [here](!)
+### Google Lighthouse testing documentation for desktop can be found [here](!) and mobile information [here](!) in pdf format.
 
 
 
-### W3C HTML and CSS validators – to test for any Errors in the code
+### W3C HTML, JSHint and CSS validators – to test for any Errors in the code
 
 ### Screenshots of final w3c passes
 
-- Homepage
+- index.html HTML Validator Screenshot
 
-![homepage_w3c_html_validator_screenshot](!)
 
-- Dates page
+- CSS Validator Screenshot
 
-![dates_w3c_html_validator_screenshot](!)
-
-- Audio Page
-
-![audio_w3c_html_validator_screenshot](!)
-
-- Contact Page
-
-![contact_w3c_html_validator_screenshot](!)
-
-- CSS information
-
-![css_w3c_html_validator_screenshot](!)
+- JSHint validator Screenshots
 
 ### Debugging information
 
