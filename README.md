@@ -59,8 +59,6 @@ The container for the questions was made a slightly darker grey to match the sku
 
 - A timer which counts up how long the player has been playing for and displayed the time taken if the player completes the game.
 
-## Features left to impliment
-
 # Technologies Used
 
 [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -153,6 +151,8 @@ Cartoon wizard image found [here](https://adventuretime.fandom.com/wiki/Wizard_T
 Ending Fireworks gif found [here](https://www.animatedimages.org/data/media/492/animated-fireworks-image-0014.gif)
 
 ## Influences
+
+First and forements Limmy the creater of the Adventure Call sketches.  Please seek him out if you're not familiar!
 
 [The inspiration behind the code of the game is from this youtube video](https://www.youtube.com/watch?v=R1S_NhKkvGA)
 
