@@ -19,7 +19,10 @@ $(document).ready(function () {
     // It runs the Welcome Screen if a name is entered.
     // and goes to the no name screen if there's nothing entered.
 
-    function checkName() {
+
+    // Event Listener for start game button to trigger checkName and Welcome screen.
+
+    $("#start-game").click(function () {
         playerName = $("#player-name").val();
         emptyName = !playerName || playerName.charAt(0) == " ";
         if (emptyName) {
@@ -29,12 +32,6 @@ $(document).ready(function () {
             $("#no-name-screen").addClass("show");
             return;
         }
-    }
-
-    // Event Listener for start game button to trigger checkName and Welcome screen.
-
-    $("#start-game").click(function () {
-        checkName();
         runWelcomeScreen();
     });
 
@@ -42,7 +39,15 @@ $(document).ready(function () {
 
     $(document).keypress(function (event) {
         if (event.key === "Enter") {
-            checkName();
+            playerName = $("#player-name").val();
+            emptyName = !playerName || playerName.charAt(0) == " ";
+        if (emptyName) {
+            $("#welcome-screen").removeClass("show");
+            $("#welcome-screen").addClass("hide");
+            $("#no-name-screen").removeClass("hide");
+            $("#no-name-screen").addClass("show");
+            return;
+        }
             runWelcomeScreen();
         }
     });
