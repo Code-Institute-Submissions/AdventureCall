@@ -8,23 +8,19 @@ $(document).ready(function () {
     const timerElement = document.getElementById("time");
 
     let playerName = "";
-    let emptyName;
     let items = {};
     let questionNode = 0;
     let timeInSeconds = 0;
     let endTime = 0;
 
-    // This function takes account of the player's name.
+    // Event Listener for start game button to trigger this function whic takes account of the player's name.
     // It also checks to see if a name has actually been entered.
     // It runs the Welcome Screen if a name is entered.
     // and goes to the no name screen if there's nothing entered.
 
-
-    // Event Listener for start game button to trigger checkName and Welcome screen.
-
     $("#start-game").click(function () {
         playerName = $("#player-name").val();
-        emptyName = !playerName || playerName.charAt(0) == " ";
+            emptyName = !playerName || playerName.charAt(0) == " ";
         if (emptyName) {
             $("#welcome-screen").removeClass("show");
             $("#welcome-screen").addClass("hide");
@@ -35,7 +31,7 @@ $(document).ready(function () {
         runWelcomeScreen();
     });
 
-    // Function to recognise if enter key is hit to trigger checkName and Welcome screen.
+    // This runs the same function as above except when the enter key is pressed.
 
     $(document).keypress(function (event) {
         if (event.key === "Enter") {
