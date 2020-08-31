@@ -1,4 +1,4 @@
-// The inspiration for this project came form this game https://github.com/WebDevSimplified/JavaScript-Text-Adventure/blob/master/game.js
+// The inspiration for this project came from this game https://github.com/WebDevSimplified/JavaScript-Text-Adventure/blob/master/game.js
 // It was found at the  Web Dev Simplified Youtube Channel https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
 
 $(document).ready(function () {
@@ -12,8 +12,9 @@ $(document).ready(function () {
     let questionNode = 0;
     let timeInSeconds = 0;
     let endTime = 0;
+    let emptyName;
 
-    // Event Listener for start game button to trigger this function whic takes account of the player's name.
+    // Event Listener for start game button to trigger this function which takes account of the player's name.
     // It also checks to see if a name has actually been entered.
     // It runs the Welcome Screen if a name is entered.
     // and goes to the no name screen if there's nothing entered.

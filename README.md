@@ -83,7 +83,7 @@ For help with colours and colours scheme.
 For image formatting.
 
 [Webformatter](https://webformatter.com/)
-For formatting code.
+For formatting HTML, CSS and javascript code.
 
 [Asana](https://asana.com/)
 for project management
@@ -98,8 +98,6 @@ for creating Wireframes for initial visual development
 [Google Fonts](https://fonts.google.com/) for fonts used in the project.
 
 [Google Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools) for testing code on various device sizes during development and debugging.
-
-[Web Formatter](https://webformatter.com/) to format HTML and CSS code.
 
 [Troy](http://troy.labs.daum.net/) to test website on different device types and sizes
 
@@ -119,7 +117,7 @@ In the GitHub Repository from the project (https://github.com/markj0hnst0n/Adven
 2. Scroll Down to the Git Hub Pages Heading.
 3. Select 'Master Branch' as the source.
 4. The Page will reload 'Settings' again.
-5. Scroll to GitHub pages heading and there will now be a clickable link (!)
+5. Scroll to GitHub pages heading and there will now be a clickable link (https://markj0hnst0n.github.io/AdventureCall/)
 6. Click this link for the live deployed page
 
 ## Run Locally
